@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=OBERFLAECHE
+comment0.text=\ \ \ BITTE\ ALS\ VORLAGE\ BZW.\ TIPS\ DAS\ PROJEKT\ MIT\ DER\ SCHLANGE\ UND\ DEM\ PILZ\ BENUTZEN\ (SIEHE\ PROJEKT\ IN\ GITHUB\ BEI\ ACCOUNT\ DENNIS)\r\n\ \ \ \ \ \ ALTERNATIV\ CATERINGPROJEKT\ BEI\ GITHUB\ PAULA\r\n\r\n\ \ \ \ \ \ Bitte\ als\ Oberkommentare\ die\ blauen\ verwenden\ mit\ Slash\ und\ zwei\ Sternen\r\n\ \ \ \ \ \ und\ als\ Zwischenkommentar\ die\ grauen\ verwenden\ \r\n\ \ \ \ \ \ \ \ \ \ \ mit\ Slash\ und\ einem\ Stern\ (Mehrzeilig)\r\n\ \ \ \ \ \ \ \ \ \ \ mit\ zwei\ Slash\ und\ ohne\ Sterne\ (Einzeilig)\r\n\ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ Povisorische\ Besetzung\:\r\n\ \ \ \ \ \ \ \ \ \ Paula\:\ \ \ \ model\r\n\ \ \ \ \ \ \ \ \ \ Mathias\:\ \ view\r\n\ \ \ \ \ \ \ \ \ \ Dennis\:\ \ \ controller\r\n
+comment1.params=
+comment1.target=OBERFLAECHE()
+comment2.params=
+comment2.target=void\ FensterAufbauenV1()
+comment3.params=
+comment3.target=void\ FensterAufbauenV2()
+comment4.params=
+comment4.target=void\ FensterAufbauenV3()
+numComments=5
