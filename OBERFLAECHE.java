@@ -64,6 +64,8 @@ public class OBERFLAECHE extends JFrame
     
     public OBERFLAECHE()
     {
+        /**Anmeldebild*/
+        
         panel = new JPanel ();
         panel.setLocation(40, 40);
         panel.setSize (876,942);
@@ -125,9 +127,29 @@ public class OBERFLAECHE extends JFrame
         b_18.setFont(b_18.getFont().deriveFont(20f));
         b_18.setVisible(true);
         
+        b_beenden = new JButton();
+        b_beenden.setText("beenden");
+        b_beenden.setLocation(100,750);
+        b_beenden.setSize(200,100);
+        b_beenden.setEnabled(true);
+        b_beenden.setFont(b_beenden.getFont().deriveFont(20f));
+        b_beenden.setVisible(true);
+        
+        b_anmelden = new JButton();
+        b_anmelden.setText("anmelden");
+        b_anmelden.setLocation(550,750);
+        b_anmelden.setSize(200,100);
+        b_anmelden.setEnabled(true);
+        b_anmelden.setFont(b_anmelden.getFont().deriveFont(20f));
+        b_anmelden.setVisible(true);
+        
+        
+        
         
         
         FensterAufbauenV1();
+        FensterAufbauenV2();
+        FensterAufbauenV3();
         
         
         panel.add(l_anmeldung);
@@ -137,6 +159,8 @@ public class OBERFLAECHE extends JFrame
         panel.add(tf_passwort);
         panel.add(b_17);
         panel.add(b_18);
+        panel.add(b_beenden);
+        panel.add(b_anmelden);
         super.add(panel);
         
         
@@ -154,6 +178,8 @@ public class OBERFLAECHE extends JFrame
         tf_passwort.setVisible(true);
         b_17.setVisible(true);
         b_18.setVisible(true);
+        b_beenden.setVisible(true);
+        b_anmelden.setVisible(true);
         panel.setVisible(true);
 
     }
