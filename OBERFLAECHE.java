@@ -181,6 +181,15 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_anzahl.setFont(l_anzahl.getFont().deriveFont(24f));
         l_anzahl.setHorizontalAlignment(JLabel.CENTER);
         
+        b_zurück = new JButton();
+        b_zurück.setText("Zurück");
+        b_zurück.setLocation(100,750);
+        b_zurück.setSize(200,100);
+        b_zurück.setEnabled(true);
+        b_zurück.setFont(b_zurück.getFont().deriveFont(20f));
+        b_zurück.setVisible(true);
+        b_zurück.setBackground(new Color(200,200,200));
+        
         
         /**Rechnungsbild*/
         
@@ -193,6 +202,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_18.addActionListener(this);
         b_beenden.addActionListener(this);
         b_anmelden.addActionListener(this);
+        b_zurück.addActionListener(this);
         
         
         //Für Anmeldebild
@@ -209,6 +219,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         //Für Bestellbild
         panel2.add(l_bestellung);
         panel2.add(l_anzahl);
+        panel2.add(b_zurück);
         
         //Für Rechnungsbild
         
@@ -245,6 +256,11 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_18.setBackground(new Color(8,224,28));
             b_17.setBackground(new Color(200,200,200));
         }
+        
+        if(ae.getSource()==this.b_zurück){
+            panel1.setVisible(true);
+            panel2.setVisible(false);
+        }
     }
     
     public void FensterAufbauenV1() {
@@ -267,6 +283,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         l_bestellung.setVisible(true);
         l_anzahl.setVisible(true);
+        b_zurück.setVisible(true);
         
         panel2.setVisible(true);
         
