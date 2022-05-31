@@ -21,7 +21,7 @@ import java.awt.Color;
       Povisorische Besetzung:
           Paula:    model
           Matthias:  view
-          Dennis:   controller
+          Dennis:   controller1
  */
 
 public class OBERFLAECHE extends JFrame implements ActionListener
