@@ -20,7 +20,7 @@ import java.awt.Color;
            
       Povisorische Besetzung:
           Paula:    model
-          Mathias:  view
+          Matthias:  view
           Dennis:   controller
  */
 
@@ -233,7 +233,12 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         }
         
         if(ae.getSource()==this.b_17){
-            b_17.setBackground(35);
+            b_17.setBackground(new Color(8,224,28));
+            
+        }
+        
+        if(ae.getSource()==this.b_18){
+            b_18.setBackground(new Color(8,224,28));
         }
     }
     
