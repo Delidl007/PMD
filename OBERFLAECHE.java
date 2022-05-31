@@ -141,6 +141,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_18.setEnabled(true);
         b_18.setFont(b_18.getFont().deriveFont(20f));
         b_18.setVisible(true);
+        b_18.setBackground(new Color(200,200,200));
         
         b_beenden = new JButton();
         b_beenden.setText("beenden");
@@ -234,11 +235,12 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         if(ae.getSource()==this.b_17){
             b_17.setBackground(new Color(8,224,28));
-            
+            b_18.setBackground(new Color(8,224,28));
         }
         
         if(ae.getSource()==this.b_18){
             b_18.setBackground(new Color(8,224,28));
+            b_17.setBackground(new Color(8,224,28));
         }
     }
     
