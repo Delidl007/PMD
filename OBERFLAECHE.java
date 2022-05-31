@@ -23,7 +23,7 @@ import javax.swing.border.*;
           Dennis:   controller
  */
 
-public class OBERFLAECHE extends JFrame
+public class OBERFLAECHE extends JFrame implements ActionListener
 
 {
     private JPanel panel1;
@@ -184,6 +184,11 @@ public class OBERFLAECHE extends JFrame
         
         FensterAufbauenV1();
         
+        b_17.addActionListener(this);
+        b_18.addActionListener(this);
+        b_beenden.addActionListener(this);
+        b_anmelden.addActionListener(this);
+        
         
         //Für Anmeldebild
         panel1.add(l_anmeldung);
@@ -211,6 +216,15 @@ public class OBERFLAECHE extends JFrame
         super.setLayout(null);
         super.setSize(973, 1047);
         super.setVisible(true);
+    }
+    
+    public void actionPerformed(ActionEvent ae){
+    
+        if(ae.getSource()==this.b_anmelden){
+            panel1.setVisible(false);
+            panel2.setVisible(true);
+        }
+    
     }
     
     public void FensterAufbauenV1() {
