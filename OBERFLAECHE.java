@@ -151,6 +151,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_beenden.setEnabled(true);
         b_beenden.setFont(b_beenden.getFont().deriveFont(20f));
         b_beenden.setVisible(true);
+        b_beenden.setBackground(new Color(200,200,200));
         
         b_anmelden = new JButton();
         b_anmelden.setText("Anmelden");
@@ -159,6 +160,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_anmelden.setEnabled(true);
         b_anmelden.setFont(b_anmelden.getFont().deriveFont(20f));
         b_anmelden.setVisible(true);
+        b_anmelden.setBackground(new Color(200,200,200));
         
         /**Bestellbild*/
         
@@ -173,7 +175,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         l_anzahl = new JLabel();
         l_anzahl.setText("Anzahl der Karten");
-        l_anzahl.setLocation(100,250);
+        l_anzahl.setLocation(80,250);
         l_anzahl.setSize(400,100);
         l_anzahl.setFont(l_anzahl.getFont().deriveFont(Font.BOLD));
         l_anzahl.setFont(l_anzahl.getFont().deriveFont(24f));
