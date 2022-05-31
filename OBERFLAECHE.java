@@ -133,6 +133,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_17.setEnabled(true);
         b_17.setFont(b_17.getFont().deriveFont(20f));
         b_17.setVisible(true);
+        b_17.setBackground(new Color(200,200,200));
         
         b_18 = new JButton();
         b_18.setText("18+");
@@ -144,7 +145,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_18.setBackground(new Color(200,200,200));
         
         b_beenden = new JButton();
-        b_beenden.setText("beenden");
+        b_beenden.setText("Beenden");
         b_beenden.setLocation(100,750);
         b_beenden.setSize(200,100);
         b_beenden.setEnabled(true);
@@ -152,7 +153,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_beenden.setVisible(true);
         
         b_anmelden = new JButton();
-        b_anmelden.setText("anmelden");
+        b_anmelden.setText("Anmelden");
         b_anmelden.setLocation(550,750);
         b_anmelden.setSize(200,100);
         b_anmelden.setEnabled(true);
@@ -235,12 +236,12 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         if(ae.getSource()==this.b_17){
             b_17.setBackground(new Color(8,224,28));
-            b_18.setBackground(new Color(8,224,28));
+            b_18.setBackground(new Color(200,200,200));
         }
         
         if(ae.getSource()==this.b_18){
             b_18.setBackground(new Color(8,224,28));
-            b_17.setBackground(new Color(8,224,28));
+            b_17.setBackground(new Color(200,200,200));
         }
     }
     
