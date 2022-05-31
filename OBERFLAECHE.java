@@ -26,10 +26,10 @@ import javax.swing.border.*;
 public class OBERFLAECHE extends JFrame
 
 {
-    private JPanel panel;
-    private JPanel anmeldungsbild;
-    private JPanel Bestellungsbild;
-    private JPanel Rechnungsbild;
+    private JPanel panel1;
+    private JPanel panel2;
+    private JPanel panel3;
+   
     
     /**JFrame zur Anmeldung am Anfang*/
     private JLabel l_anmeldung;
@@ -66,15 +66,29 @@ public class OBERFLAECHE extends JFrame
     {
         /**Anmeldebild*/
         
-        panel = new JPanel ();
-        panel.setLocation(40, 40);
-        panel.setSize (876,942);
-        panel.setVisible(true);
-        panel.setLayout(null);
-        panel.setBorder(new EtchedBorder());
+        panel1 = new JPanel ();
+        panel1.setLocation(40, 40);
+        panel1.setSize (876,942);
+        panel1.setVisible(true);
+        panel1.setLayout(null);
+        panel1.setBorder(new EtchedBorder());
+        
+        panel2 = new JPanel ();
+        panel2.setLocation(40, 40);
+        panel2.setSize (876,942);
+        panel2.setVisible(true);
+        panel2.setLayout(null);
+        panel2.setBorder(new EtchedBorder());
+        
+        panel3 = new JPanel ();
+        panel3.setLocation(40, 40);
+        panel3.setSize (876,942);
+        panel3.setVisible(true);
+        panel3.setLayout(null);
+        panel3.setBorder(new EtchedBorder());
         
         l_anmeldung = new JLabel();
-        l_anmeldung.setText("Anmedlung");
+        l_anmeldung.setText("Anmeldung");
         l_anmeldung.setLocation(40,0);
         l_anmeldung.setSize(876, 150);
         l_anmeldung.setFont(l_anmeldung.getFont().deriveFont(Font.BOLD));
@@ -143,25 +157,55 @@ public class OBERFLAECHE extends JFrame
         b_anmelden.setFont(b_anmelden.getFont().deriveFont(20f));
         b_anmelden.setVisible(true);
         
+        /**Bestellbild*/
+        
+        l_bestellung = new JLabel();
+        l_bestellung.setText("Bestellung");
+        l_bestellung.setLocation(40,0);
+        l_bestellung.setSize(876, 150);
+        l_bestellung.setFont(l_bestellung.getFont().deriveFont(Font.BOLD));
+        l_bestellung.setFont(l_bestellung.getFont().deriveFont(46f));
+        l_bestellung.setHorizontalAlignment(JLabel.CENTER);
+
+        
+        l_anzahl = new JLabel();
+        l_anzahl.setText("Anzahl der Karten");
+        l_anzahl.setLocation(150,250);
+        l_anzahl.setSize(200,100);
+        l_anzahl.setFont(l_anzahl.getFont().deriveFont(Font.BOLD));
+        l_anzahl.setFont(l_anzahl.getFont().deriveFont(46f));
+        l_anzahl.setHorizontalAlignment(JLabel.CENTER);
         
         
+        /**Rechnungsbild*/
         
+        
+        /**Zusatz*/
         
         FensterAufbauenV1();
-        FensterAufbauenV2();
-        FensterAufbauenV3();
         
         
-        panel.add(l_anmeldung);
-        panel.add(l_benutzername);
-        panel.add(l_passwort);
-        panel.add(tf_benutzername);
-        panel.add(tf_passwort);
-        panel.add(b_17);
-        panel.add(b_18);
-        panel.add(b_beenden);
-        panel.add(b_anmelden);
-        super.add(panel);
+        //Für Anmeldebild
+        panel1.add(l_anmeldung);
+        panel1.add(l_benutzername);
+        panel1.add(l_passwort);
+        panel1.add(tf_benutzername);
+        panel1.add(tf_passwort);
+        panel1.add(b_17);
+        panel1.add(b_18);
+        panel1.add(b_beenden);
+        panel1.add(b_anmelden);
+        
+        //Für Bestellbild
+        panel2.add(l_bestellung);
+        panel2.add(l_anzahl);
+        
+        //Für Rechnungsbild
+        
+        
+        super.add(panel1);
+        super.add(panel2);
+        super.add(panel3);
         
         
         super.setLayout(null);
@@ -170,7 +214,7 @@ public class OBERFLAECHE extends JFrame
     }
     
     public void FensterAufbauenV1() {
-
+        
         l_anmeldung.setVisible(true);
         l_benutzername.setVisible(true);
         l_passwort.setVisible(true);
@@ -180,13 +224,17 @@ public class OBERFLAECHE extends JFrame
         b_18.setVisible(true);
         b_beenden.setVisible(true);
         b_anmelden.setVisible(true);
-        panel.setVisible(true);
+        
+        panel1.setVisible(true);
 
     }
     
     public void FensterAufbauenV2() {
-
         
+        l_bestellung.setVisible(true);
+        l_anzahl.setVisible(true);
+        
+        panel2.setVisible(true);
         
 
     }
