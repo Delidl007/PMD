@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.Component;
 import javax.swing.border.*;
+import java.awt.Color;
 
 /**   BITTE ALS VORLAGE BZW. TIPS DAS PROJEKT MIT DER SCHLANGE UND DEM PILZ BENUTZEN (SIEHE PROJEKT IN GITHUB BEI ACCOUNT DENNIS)
       ALTERNATIV CATERINGPROJEKT BEI GITHUB PAULA
@@ -170,10 +171,10 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         l_anzahl = new JLabel();
         l_anzahl.setText("Anzahl der Karten");
-        l_anzahl.setLocation(150,250);
-        l_anzahl.setSize(200,100);
+        l_anzahl.setLocation(100,250);
+        l_anzahl.setSize(400,100);
         l_anzahl.setFont(l_anzahl.getFont().deriveFont(Font.BOLD));
-        l_anzahl.setFont(l_anzahl.getFont().deriveFont(46f));
+        l_anzahl.setFont(l_anzahl.getFont().deriveFont(24f));
         l_anzahl.setHorizontalAlignment(JLabel.CENTER);
         
         
@@ -224,7 +225,16 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             panel1.setVisible(false);
             panel2.setVisible(true);
         }
-    
+        
+        if(ae.getSource()==this.b_beenden){
+            panel1.setVisible(false);
+            panel2.setVisible(false);
+            panel3.setVisible(false);
+        }
+        
+        if(ae.getSource()==this.b_17){
+            b_17.setBackground(35);
+        }
     }
     
     public void FensterAufbauenV1() {
