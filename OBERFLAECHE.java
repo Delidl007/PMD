@@ -175,11 +175,17 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         l_anzahl = new JLabel();
         l_anzahl.setText("Anzahl der Karten");
-        l_anzahl.setLocation(80,250);
-        l_anzahl.setSize(400,100);
-        l_anzahl.setFont(l_anzahl.getFont().deriveFont(Font.BOLD));
+        l_anzahl.setLocation(100,250);
+        l_anzahl.setSize(250,100);
         l_anzahl.setFont(l_anzahl.getFont().deriveFont(24f));
         l_anzahl.setHorizontalAlignment(JLabel.CENTER);
+        
+        l_konzertnummer = new JLabel();
+        l_konzertnummer.setText("Konzertnummer");
+        l_konzertnummer.setLocation(100,400);
+        l_konzertnummer.setSize(250,100);
+        l_konzertnummer.setFont(l_konzertnummer.getFont().deriveFont(24f));
+        l_konzertnummer.setHorizontalAlignment(JLabel.CENTER);
         
         b_zurück = new JButton();
         b_zurück.setText("Zurück");
@@ -219,6 +225,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         //Für Bestellbild
         panel2.add(l_bestellung);
         panel2.add(l_anzahl);
+        panel2.add(l_konzertnummer);
         panel2.add(b_zurück);
         
         //Für Rechnungsbild
@@ -284,6 +291,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_bestellung.setVisible(true);
         l_anzahl.setVisible(true);
         b_zurück.setVisible(true);
+        l_konzertnummer.setVisible(true);
         
         panel2.setVisible(true);
         
