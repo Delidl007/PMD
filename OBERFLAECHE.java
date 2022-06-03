@@ -32,7 +32,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JPanel panel3;
    
     
-    /**JFrame zur Anmeldung am Anfang*/
+    /**JPanel1 zur Anmeldung am Anfang*/
     private JLabel l_anmeldung;
     private JLabel l_benutzername;
     private JLabel l_passwort;
@@ -43,19 +43,22 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JButton b_beenden;
     private JButton b_anmelden;
     
-    /**JFrame zur Bestellungsauswahl für BEIDE Altersgruppen; es wird beim Ausführen mit setVisible bearbeitet*/
+    
+    /**JPanel2 zur Bestellungsauswahl für BEIDE Altersgruppen; es wird beim Ausführen mit setVisible bearbeitet*/
     private JLabel l_bestellung;
     private JLabel l_anzahl;
     private JLabel l_konzertnummer;
     private JTable t;
     private JComboBox cb_anzahl;
     private JComboBox cb_konzertnummer;
-    private JButton b_zurück;
+    private JButton b_zurück1;
     private JButton b_auswahlbestätigen;
     
-    /**JFrame für Rechnung am Ende*/
+    
+    /**JPanel3 für Rechnung am Ende*/
     private JLabel l_rechnung;
     private JLabel l_gesamtpreis;
+    private JButton b_zurück2;
     /*   Drei Felder zur Zusammenfassenden Info fehlen noch
          konzertnr.
          anzahl
@@ -65,8 +68,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     
     public OBERFLAECHE()
     {
-        /**Anmeldebild*/
         
+        
+        /**Anmeldebild*/
         panel1 = new JPanel ();
         panel1.setLocation(40, 40);
         panel1.setSize (876,942);
@@ -162,8 +166,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_anmelden.setVisible(true);
         b_anmelden.setBackground(new Color(200,200,200));
         
-        /**Bestellbild*/
         
+        /**Bestellbild*/
         l_bestellung = new JLabel();
         l_bestellung.setText("Bestellung");
         l_bestellung.setLocation(40,0);
@@ -187,28 +191,46 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_konzertnummer.setFont(l_konzertnummer.getFont().deriveFont(24f));
         l_konzertnummer.setHorizontalAlignment(JLabel.CENTER);
         
-        b_zurück = new JButton();
-        b_zurück.setText("Zurück");
-        b_zurück.setLocation(100,750);
-        b_zurück.setSize(200,100);
-        b_zurück.setEnabled(true);
-        b_zurück.setFont(b_zurück.getFont().deriveFont(20f));
-        b_zurück.setVisible(true);
-        b_zurück.setBackground(new Color(200,200,200));
+        b_zurück1 = new JButton();
+        b_zurück1.setText("Zurück");
+        b_zurück1.setLocation(100,750);
+        b_zurück1.setSize(200,100);
+        b_zurück1.setEnabled(true);
+        b_zurück1.setFont(b_zurück1.getFont().deriveFont(20f));
+        b_zurück1.setVisible(true);
+        b_zurück1.setBackground(new Color(200,200,200));
+        
+        b_auswahlbestätigen = new JButton();
+        b_auswahlbestätigen.setText("Auswahl bestätigen");
+        b_auswahlbestätigen.setLocation(550,750);
+        b_auswahlbestätigen.setSize(200,100);
+        b_auswahlbestätigen.setEnabled(true);
+        b_auswahlbestätigen.setFont(b_auswahlbestätigen.getFont().deriveFont(20f));
+        b_auswahlbestätigen.setVisible(true);
+        b_auswahlbestätigen.setBackground(new Color(200,200,200));
         
         
         /**Rechnungsbild*/
+        l_rechnung = new JLabel();
+        l_rechnung.setText("Rechnung");
+        l_rechnung.setLocation(40,0);
+        l_rechnung.setSize(876, 150);
+        l_rechnung.setFont(l_rechnung.getFont().deriveFont(Font.BOLD));
+        l_rechnung.setFont(l_rechnung.getFont().deriveFont(46f));
+        l_rechnung.setHorizontalAlignment(JLabel.CENTER);
+        
+        b_zurück2 = new JButton();
+        b_zurück2.setText("Zurück");
+        b_zurück2.setLocation(100,750);
+        b_zurück2.setSize(200,100);
+        b_zurück2.setEnabled(true);
+        b_zurück2.setFont(b_zurück2.getFont().deriveFont(20f));
+        b_zurück2.setVisible(true);
+        b_zurück2.setBackground(new Color(200,200,200));
         
         
         /**Zusatz*/
-        
-        FensterAufbauenV1();
-        
-        b_17.addActionListener(this);
-        b_18.addActionListener(this);
-        b_beenden.addActionListener(this);
-        b_anmelden.addActionListener(this);
-        b_zurück.addActionListener(this);
+        FensterAufbauenV1();    
         
         
         //Für Anmeldebild
@@ -222,13 +244,25 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel1.add(b_beenden);
         panel1.add(b_anmelden);
         
+        b_17.addActionListener(this);
+        b_18.addActionListener(this);
+        b_beenden.addActionListener(this);
+        b_anmelden.addActionListener(this);
+        
+        
         //Für Bestellbild
         panel2.add(l_bestellung);
         panel2.add(l_anzahl);
         panel2.add(l_konzertnummer);
-        panel2.add(b_zurück);
+        panel2.add(b_zurück1);
+        panel2.add(b_auswahlbestätigen);
+        
+        b_zurück1.addActionListener(this);
+        b_auswahlbestätigen.addActionListener(this);
+        
         
         //Für Rechnungsbild
+        panel3.add(l_rechnung);
         
         
         //Zusatz
@@ -243,7 +277,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     }
     
     public void actionPerformed(ActionEvent ae){
-    
+        
+        /**Anmeldefenster*/
         if(ae.getSource()==this.b_anmelden){
             panel1.setVisible(false);
             panel2.setVisible(true);
@@ -265,9 +300,17 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_17.setBackground(new Color(200,200,200));
         }
         
-        if(ae.getSource()==this.b_zurück){
+        
+        /**Bestellfenster*/
+        if(ae.getSource()==this.b_zurück1){
             panel1.setVisible(true);
             panel2.setVisible(false);
+        }
+        
+        if(ae.getSource()==this.b_auswahlbestätigen){
+            panel1.setVisible(false);
+            panel2.setVisible(false);
+            panel3.setVisible(true);
         }
     }
     
@@ -291,8 +334,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         l_bestellung.setVisible(true);
         l_anzahl.setVisible(true);
-        b_zurück.setVisible(true);
+        b_zurück1.setVisible(true);
         l_konzertnummer.setVisible(true);
+        b_auswahlbestätigen.setVisible(true);
         
         panel2.setVisible(true);
         
@@ -300,9 +344,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     }
     
     public void FensterAufbauenV3() {
+        l_rechnung.setVisible(true);
         
         
-        
-        
+        panel3.setVisible(true);        
     }
 }
