@@ -231,6 +231,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         //Für Rechnungsbild
         
         
+        //Zusatz
         super.add(panel1);
         super.add(panel2);
         super.add(panel3);
