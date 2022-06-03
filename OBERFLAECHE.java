@@ -59,6 +59,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JLabel l_rechnung;
     private JLabel l_gesamtpreis;
     private JButton b_zurück2;
+    private JLabel l_gesamtzahl;
+    private JLabel l_endnummer;
     /*   Drei Felder zur Zusammenfassenden Info fehlen noch
          konzertnr.
          anzahl
@@ -181,15 +183,13 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_anzahl.setText("Anzahl der Karten");
         l_anzahl.setLocation(100,250);
         l_anzahl.setSize(250,100);
-        l_anzahl.setFont(l_anzahl.getFont().deriveFont(24f));
-        l_anzahl.setHorizontalAlignment(JLabel.CENTER);
+        l_anzahl.setFont(l_anzahl.getFont().deriveFont(24f));       
         
         l_konzertnummer = new JLabel();
         l_konzertnummer.setText("Konzertnummer");
         l_konzertnummer.setLocation(100,400);
         l_konzertnummer.setSize(250,100);
         l_konzertnummer.setFont(l_konzertnummer.getFont().deriveFont(24f));
-        l_konzertnummer.setHorizontalAlignment(JLabel.CENTER);
         
         b_zurück1 = new JButton();
         b_zurück1.setText("Zurück");
@@ -228,6 +228,33 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück2.setVisible(true);
         b_zurück2.setBackground(new Color(200,200,200));
         
+        l_gesamtzahl = new JLabel();
+        l_gesamtzahl.setText("Anzahl der Karten");
+        l_gesamtzahl.setLocation(100,250);
+        l_gesamtzahl.setSize(250,100);
+        l_gesamtzahl.setFont(l_gesamtzahl.getFont().deriveFont(24f));
+        
+        l_endnummer = new JLabel();
+        l_endnummer.setText("Konzertnummer");
+        l_endnummer.setLocation(100,400);
+        l_endnummer.setSize(250,100);
+        l_endnummer.setFont(l_endnummer.getFont().deriveFont(24f));
+        
+        l_gesamtpreis = new JLabel();
+        l_gesamtpreis.setText("Gesamtpreis");
+        l_gesamtpreis.setLocation(100,550);
+        l_gesamtpreis.setSize(250,100);
+        l_gesamtpreis.setFont(l_gesamtpreis.getFont().deriveFont(24f));
+        
+        b_pdf = new JButton();
+        b_pdf.setText("pdf drucken");
+        b_pdf.setLocation(550,750);
+        b_pdf.setSize(200,100);
+        b_pdf.setEnabled(true);
+        b_pdf.setFont(b_pdf.getFont().deriveFont(20f));
+        b_pdf.setVisible(true);
+        b_pdf.setBackground(new Color(200,200,200));
+        
         
         /**Zusatz*/
         FensterAufbauenV1();    
@@ -263,6 +290,13 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         //Für Rechnungsbild
         panel3.add(l_rechnung);
+        panel3.add(b_zurück2);
+        panel3.add(l_gesamtzahl);
+        panel3.add(l_endnummer);
+        panel3.add(l_gesamtpreis);
+        panel3.add(b_pdf);
+        
+        b_zurück2.addActionListener(this);
         
         
         //Zusatz
@@ -277,6 +311,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     }
     
     public void actionPerformed(ActionEvent ae){
+        
         
         /**Anmeldefenster*/
         if(ae.getSource()==this.b_anmelden){
@@ -312,6 +347,13 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             panel2.setVisible(false);
             panel3.setVisible(true);
         }
+        
+        
+        /**Rechnungsfenster*/
+        if(ae.getSource()==this.b_zurück2){
+            panel2.setVisible(true);
+            panel3.setVisible(false);
+        }
     }
     
     public void FensterAufbauenV1() {
@@ -345,7 +387,11 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     
     public void FensterAufbauenV3() {
         l_rechnung.setVisible(true);
-        
+        b_zurück2.setVisible(true);
+        l_gesamtzahl.setVisible(true);
+        l_endnummer.setVisible(true);
+        l_gesamtpreis.setVisible(true);
+        b_pdf.setVisible(true);
         
         panel3.setVisible(true);        
     }
