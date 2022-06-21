@@ -59,14 +59,11 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     /**JPanel3 für Rechnung am Ende*/
     private JLabel l_rechnung;
     private JLabel l_gesamtpreis;
-    private JButton b_zurück2;
     private JLabel l_gesamtzahl;
     private JLabel l_endnummer;
-    /*   Drei Felder zur Zusammenfassenden Info fehlen noch
-         konzertnr.
-         anzahl
-         gesamtpreis
-    */
+    private JLabel l_gesamtzahl2;
+    private JLabel l_endnummer2;
+    private JButton b_zurück2;
     private JButton b_pdf;
     
     public OBERFLAECHE()
@@ -260,6 +257,18 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_endnummer.setSize(250,100);
         l_endnummer.setFont(l_endnummer.getFont().deriveFont(24f));
         
+        l_gesamtzahl2 = new JLabel();
+        l_gesamtzahl2.setText("Anzahl der Karten");
+        l_gesamtzahl2.setLocation(500,250);
+        l_gesamtzahl2.setSize(250,100);
+        l_gesamtzahl2.setFont(l_gesamtzahl2.getFont().deriveFont(24f));
+        
+        l_endnummer2 = new JLabel();
+        l_endnummer2.setText("Konzertnummer");
+        l_endnummer2.setLocation(500,400);
+        l_endnummer2.setSize(250,100);
+        l_endnummer2.setFont(l_endnummer2.getFont().deriveFont(24f));
+        
         l_gesamtpreis = new JLabel();
         l_gesamtpreis.setText("Gesamtpreis");
         l_gesamtpreis.setLocation(100,550);
@@ -308,6 +317,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         b_zurück1.addActionListener(this);
         b_auswahlbestätigen.addActionListener(this);
+        cb_anzahl.addActionListener(this);
         
         
         //Für Rechnungsbild
@@ -315,6 +325,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.add(b_zurück2);
         panel3.add(l_gesamtzahl);
         panel3.add(l_endnummer);
+        panel3.add(l_gesamtzahl2);
+        panel3.add(l_endnummer2);
         panel3.add(l_gesamtpreis);
         panel3.add(b_pdf);
         
@@ -371,6 +383,15 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             panel3.setVisible(true);
         }
         
+        int selection = cb_anzahl.getSelectedIndex();
+        switch (selection){
+            case 0:  l_gesamtzahl2.setText("1"); break;
+            case 1:  l_gesamtzahl2.setText("2"); break;
+            case 2:  l_gesamtzahl2.setText("3"); break;
+            case 3:  l_gesamtzahl2.setText("4"); break;
+            case 4:  l_gesamtzahl2.setText("5"); break;
+            }
+                
         
         /**Rechnungsfenster*/
         if(ae.getSource()==this.b_zurück2){
@@ -421,6 +442,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück2.setVisible(true);
         l_gesamtzahl.setVisible(true);
         l_endnummer.setVisible(true);
+        l_gesamtzahl2.setVisible(true);
+        l_endnummer2.setVisible(true);
         l_gesamtpreis.setVisible(true);
         b_pdf.setVisible(true);
         
