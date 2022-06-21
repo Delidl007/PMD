@@ -4,7 +4,7 @@ PMD-Online-Kartenbestellung
 Online Plattform zum Kauf von Konzertkarten 
 
 1. Programm starten
-2. Es erscheint ein Anmeldefenster, dort muss man sich anmelden und sein Alter auswählen.
+2. Es erscheint ein Anmeldefenster, dort meldet man sich an und wählt sei Alter aus.
 3. Button 'Anmelden' klicken.
 4. Wenn man sich angemeldet hat, wählt man ein Konzert mit einer Nummer und die Anzahl der Karten aus.
 5. Butto 'Auswhal bestätigen' klicken.
