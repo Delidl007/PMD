@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.Component;
 import javax.swing.border.*;
 import java.awt.Color;
+import javax.swing.JComboBox;
 
 /**   BITTE ALS VORLAGE BZW. TIPS DAS PROJEKT MIT DER SCHLANGE UND DEM PILZ BENUTZEN (SIEHE PROJEKT IN GITHUB BEI ACCOUNT DENNIS)
       ALTERNATIV CATERINGPROJEKT BEI GITHUB PAULA
@@ -190,6 +191,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_konzertnummer.setLocation(100,400);
         l_konzertnummer.setSize(250,100);
         l_konzertnummer.setFont(l_konzertnummer.getFont().deriveFont(24f));
+        
+        cb_anzahl = new JComboBox();
         
         b_zurück1 = new JButton();
         b_zurück1.setText("Zurück");
