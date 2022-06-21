@@ -193,6 +193,23 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_konzertnummer.setFont(l_konzertnummer.getFont().deriveFont(24f));
         
         cb_anzahl = new JComboBox();
+        cb_anzahl.setLocation(500,270);
+        cb_anzahl.setSize(300,50);
+        cb_anzahl.addItem("1");
+        cb_anzahl.addItem("2");
+        cb_anzahl.addItem("3");
+        cb_anzahl.addItem("4");
+        cb_anzahl.addItem("5");
+                
+        cb_konzertnummer = new JComboBox();
+        cb_konzertnummer.setLocation(500,430);
+        cb_konzertnummer.setSize(300,50);
+        cb_konzertnummer.addItem("1");
+        cb_konzertnummer.addItem("2");
+        cb_konzertnummer.addItem("3");
+        cb_konzertnummer.addItem("4");
+        cb_konzertnummer.addItem("5");
+        cb_konzertnummer.addItem("6");
         
         b_zurück1 = new JButton();
         b_zurück1.setText("Zurück");
@@ -286,6 +303,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel2.add(l_konzertnummer);
         panel2.add(b_zurück1);
         panel2.add(b_auswahlbestätigen);
+        panel2.add(cb_konzertnummer);
+        panel2.add(cb_anzahl);
         
         b_zurück1.addActionListener(this);
         b_auswahlbestätigen.addActionListener(this);
@@ -300,6 +319,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.add(b_pdf);
         
         b_zurück2.addActionListener(this);
+        b_pdf.addActionListener(this);
         
         
         //Zusatz
@@ -357,6 +377,12 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             panel2.setVisible(true);
             panel3.setVisible(false);
         }
+        
+        if(ae.getSource()==this.b_pdf){
+            panel1.setVisible(false);
+            panel2.setVisible(false);
+            panel3.setVisible(false);
+        }
     }
     
     public void FensterAufbauenV1() {
@@ -382,6 +408,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück1.setVisible(true);
         l_konzertnummer.setVisible(true);
         b_auswahlbestätigen.setVisible(true);
+        cb_konzertnummer.setVisible(true);
+        cb_anzahl.setVisible(true);
         
         panel2.setVisible(true);
         
