@@ -192,21 +192,21 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         cb_anzahl = new JComboBox();
         cb_anzahl.setLocation(500,270);
         cb_anzahl.setSize(300,50);
-        cb_anzahl.addItem("1");
-        cb_anzahl.addItem("2");
-        cb_anzahl.addItem("3");
-        cb_anzahl.addItem("4");
-        cb_anzahl.addItem("5");
+        cb_anzahl.addItem("1 Karte");
+        cb_anzahl.addItem("2 Karten");
+        cb_anzahl.addItem("3 Karten");
+        cb_anzahl.addItem("4 Karten");
+        cb_anzahl.addItem("5 Karten");
                 
         cb_konzertnummer = new JComboBox();
         cb_konzertnummer.setLocation(500,430);
         cb_konzertnummer.setSize(300,50);
-        cb_konzertnummer.addItem("1");
-        cb_konzertnummer.addItem("2");
-        cb_konzertnummer.addItem("3");
-        cb_konzertnummer.addItem("4");
-        cb_konzertnummer.addItem("5");
-        cb_konzertnummer.addItem("6");
+        cb_konzertnummer.addItem("1 Andreas Gabalier");
+        cb_konzertnummer.addItem("2 Donikkl");
+        cb_konzertnummer.addItem("3 Exil des Schatten");
+        cb_konzertnummer.addItem("4 Die Toten Hosen");
+        cb_konzertnummer.addItem("5 Trailerpark");
+        cb_konzertnummer.addItem("6 Rammstein");
         
         b_zurück1 = new JButton();
         b_zurück1.setText("Zurück");
@@ -385,11 +385,21 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         int selection = cb_anzahl.getSelectedIndex();
         switch (selection){
-            case 0:  l_gesamtzahl2.setText("1"); break;
-            case 1:  l_gesamtzahl2.setText("2"); break;
-            case 2:  l_gesamtzahl2.setText("3"); break;
-            case 3:  l_gesamtzahl2.setText("4"); break;
-            case 4:  l_gesamtzahl2.setText("5"); break;
+            case 0:  l_gesamtzahl2.setText("1 Karte"); break;
+            case 1:  l_gesamtzahl2.setText("2 Karten"); break;
+            case 2:  l_gesamtzahl2.setText("3 Karten"); break;
+            case 3:  l_gesamtzahl2.setText("4 Karten"); break;
+            case 4:  l_gesamtzahl2.setText("5 Karten"); break;
+            }
+            
+        int selection2 = cb_konzertnummer.getSelectedIndex();
+        switch (selection2){
+            case 0:  l_endnummer2.setText("1-Andreas Gabailer"); break;
+            case 1:  l_endnummer2.setText("2-Donikkl"); break;
+            case 2:  l_endnummer2.setText("3-Exil des Schattens"); break;
+            case 3:  l_endnummer2.setText("4-Die Toten Hosen"); break;
+            case 4:  l_endnummer2.setText("5-Trailerpark"); break;
+            case 5:  l_endnummer2.setText("6-Rammstein"); break;
             }
                 
         
