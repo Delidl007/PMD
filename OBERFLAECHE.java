@@ -297,6 +297,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.add(b_pdf);
         
         b_zurück2.addActionListener(this);
+        b_pdf.addActionListener(this);
         
         
         //Zusatz
@@ -352,6 +353,12 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         /**Rechnungsfenster*/
         if(ae.getSource()==this.b_zurück2){
             panel2.setVisible(true);
+            panel3.setVisible(false);
+        }
+        
+        if(ae.getSource()==this.b_pdf){
+            panel1.setVisible(false);
+            panel2.setVisible(false);
             panel3.setVisible(false);
         }
     }
