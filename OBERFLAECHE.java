@@ -433,9 +433,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             case 0:  l_endnummer2.setText("1 - Andreas Gabailer"); break;
             case 1:  l_endnummer2.setText("2 - Donikkl"); break;
             case 2:  l_endnummer2.setText("3 - Exil des Schattens"); break;
-            case 3:  l_endnummer2.setText("4-Die Toten Hosen"); break;
-            case 4:  l_endnummer2.setText("5-Trailerpark"); break;
-            case 5:  l_endnummer2.setText("6-Rammstein"); break;
+            case 3:  l_endnummer2.setText("4 - Die Toten Hosen"); break;
+            case 4:  l_endnummer2.setText("5 - Trailerpark"); break;
+            case 5:  l_endnummer2.setText("6 - Rammstein"); break;
             }
                 
         
