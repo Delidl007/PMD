@@ -211,12 +211,12 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         cb_konzertnummer = new JComboBox();
         cb_konzertnummer.setLocation(500,430);
         cb_konzertnummer.setSize(300,50);
-        cb_konzertnummer.addItem("1 Andreas Gabalier");
-        cb_konzertnummer.addItem("2 Donikkl");
-        cb_konzertnummer.addItem("3 Exil des Schatten");
-        cb_konzertnummer.addItem("4 Die Toten Hosen");
-        cb_konzertnummer.addItem("5 Trailerpark");
-        cb_konzertnummer.addItem("6 Rammstein");
+        cb_konzertnummer.addItem("1 - Andreas Gabalier");
+        cb_konzertnummer.addItem("2 - Donikkl");
+        cb_konzertnummer.addItem("3 - Exil des Schatten");
+        cb_konzertnummer.addItem("4 - Die Toten Hosen");
+        cb_konzertnummer.addItem("5 - Trailerpark");
+        cb_konzertnummer.addItem("6 - Rammstein");
         
         b_zurück1 = new JButton();
         b_zurück1.setText("Zurück");
