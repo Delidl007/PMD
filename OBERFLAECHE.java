@@ -34,6 +34,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
    
     
     /**JPanel1 zur Anmeldung am Anfang*/
+    private JButton b_start;
     private JLabel l_anmeldung;
     private JLabel l_benutzername;
     private JLabel l_passwort;
@@ -71,6 +72,16 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         
         /**Anmeldebild*/
+        
+        b_start = new JButton();
+        b_start.setText("Start");
+        b_start.setLocation(550,750);
+        b_start.setSize(200,100);
+        b_start.setEnabled(true);
+        b_start.setFont(b_start.getFont().deriveFont(20f));
+        b_start.setVisible(true);
+        b_start.setBackground(new Color(200,200,200));
+        
         panel1 = new JPanel ();
         panel1.setLocation(40, 40);
         panel1.setSize (876,942);
@@ -176,7 +187,6 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_bestellung.setFont(l_bestellung.getFont().deriveFont(46f));
         l_bestellung.setHorizontalAlignment(JLabel.CENTER);
 
-        
         l_anzahl = new JLabel();
         l_anzahl.setText("Anzahl der Karten");
         l_anzahl.setLocation(100,250);
@@ -290,6 +300,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         
         //Für Anmeldebild
+        panel1.add (b_start);
         panel1.add(l_anmeldung);
         panel1.add(l_benutzername);
         panel1.add(l_passwort);
@@ -300,6 +311,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel1.add(b_beenden);
         panel1.add(b_anmelden);
         
+        b_start.addActionListener(this);
         b_17.addActionListener(this);
         b_18.addActionListener(this);
         b_beenden.addActionListener(this);
@@ -349,15 +361,39 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         
         /**Anmeldefenster*/
+        
+        if(ae.getSource()==this.b_start){
+            b_start.setVisible(false);
+            l_anmeldung.setVisible(true);
+            l_benutzername.setVisible(true);
+            l_passwort.setVisible(true);
+            tf_benutzername.setVisible(true);
+            tf_passwort.setVisible(true);
+            b_17.setVisible(true);
+            b_18.setVisible(true);
+            b_beenden.setVisible(true);
+            b_anmelden.setVisible(true);
+        }
+        
         if(ae.getSource()==this.b_anmelden){
             panel1.setVisible(false);
             panel2.setVisible(true);
         }
         
         if(ae.getSource()==this.b_beenden){
-            panel1.setVisible(false);
+            panel1.setVisible(true);
             panel2.setVisible(false);
             panel3.setVisible(false);
+            l_anmeldung.setVisible(false);
+            l_benutzername.setVisible(false);
+            l_passwort.setVisible(false);
+            tf_benutzername.setVisible(false);
+            tf_passwort.setVisible(false);
+            b_17.setVisible(false);
+            b_18.setVisible(false);
+            b_beenden.setVisible(false);
+            b_anmelden.setVisible(false);
+            b_start.setVisible(true);
         }
         
         if(ae.getSource()==this.b_17){
@@ -418,15 +454,16 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     
     public void FensterAufbauenV1() {
         
-        l_anmeldung.setVisible(true);
-        l_benutzername.setVisible(true);
-        l_passwort.setVisible(true);
-        tf_benutzername.setVisible(true);
-        tf_passwort.setVisible(true);
-        b_17.setVisible(true);
-        b_18.setVisible(true);
-        b_beenden.setVisible(true);
-        b_anmelden.setVisible(true);
+        b_start.setVisible(true);
+        l_anmeldung.setVisible(false);
+        l_benutzername.setVisible(false);
+        l_passwort.setVisible(false);
+        tf_benutzername.setVisible(false);
+        tf_passwort.setVisible(false);
+        b_17.setVisible(false);
+        b_18.setVisible(false);
+        b_beenden.setVisible(false);
+        b_anmelden.setVisible(false);
         
         panel1.setVisible(true);
 
