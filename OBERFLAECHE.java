@@ -308,31 +308,32 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         ticket1.setVisible(false);
         
         ImageIcon picture2 = new ImageIcon(this.getClass().getResource("Test.png"));
-        ticket2 = new JLabel(picture);
+        ticket2 = new JLabel(picture2);
         ticket2.setLocation(200,200);
         ticket2.setSize(600,600);
         ticket2.setVisible(false);
         
+       
         ImageIcon picture3 = new ImageIcon(this.getClass().getResource("Exil des Schattens-Konzertkarte.jpg"));
-        ticket3 = new JLabel(picture);
-        ticket3.setLocation(200,200);
-        ticket3.setSize(600,600);
+        ticket3 = new JLabel(picture3);
+        ticket3.setLocation(50,200);
+        ticket3.setSize(800,600);
         ticket3.setVisible(false);
         
         ImageIcon picture4 = new ImageIcon(this.getClass().getResource("Test.png"));
-        ticket4 = new JLabel(picture);
+        ticket4 = new JLabel(picture4);
         ticket4.setLocation(200,200);
         ticket4.setSize(600,600);
         ticket4.setVisible(false);
         
         ImageIcon picture5 = new ImageIcon(this.getClass().getResource("Test.png"));
-        ticket5 = new JLabel(picture);
+        ticket5 = new JLabel(picture5);
         ticket5.setLocation(200,200);
         ticket5.setSize(600,600);
         ticket5.setVisible(false);
         
         ImageIcon picture6 = new ImageIcon(this.getClass().getResource("Test.png"));
-        ticket6 = new JLabel(picture);
+        ticket6 = new JLabel(picture6);
         ticket6.setLocation(200,200);
         ticket6.setSize(600,600);
         ticket6.setVisible(false);
@@ -385,6 +386,11 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.add(l_gesamtpreis);
         panel3.add(b_pdf);
         panel3.add(ticket1);
+        panel3.add(ticket2);
+        panel3.add(ticket3);
+        panel3.add(ticket4);
+        panel3.add(ticket5);
+        panel3.add(ticket6);
         
         
         b_zurück2.addActionListener(this);
@@ -461,7 +467,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         if(ae.getSource()==this.b_auswahlbestätigen){
             panel1.setVisible(false);
             panel2.setVisible(false);
-            panel3.setVisible(false);
+            panel3.setVisible(true);
         }
         
         int selection = cb_anzahl.getSelectedIndex();
@@ -483,15 +489,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             case 5:  l_endnummer2.setText("6 - Rammstein"); break;
             }
             
-        int selection3 = cb_konzertnummer.getSelectedIndex();
-        switch (selection2){
-            case 0:  ticket1.setVisible(true); break;
-            case 1:  ticket2.setVisible(true); break;
-            case 2:  ticket3.setVisible(true); break;
-            case 3:  ticket4.setVisible(true); break;
-            case 4:  ticket5.setVisible(true); break;
-            case 5:  ticket6.setVisible(true); break;
-            }
+        
                 
         
         /**Rechnungsfenster*/
@@ -501,6 +499,15 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         }
         
         if(ae.getSource()==this.b_pdf){
+            int selection3 = cb_konzertnummer.getSelectedIndex();
+             switch (selection2){
+                case 0:  ticket1.setVisible(true); break;
+                case 1:  ticket2.setVisible(true); break;
+                case 2:  ticket3.setVisible(true); break;
+                case 3:  ticket4.setVisible(true); break;
+                case 4:  ticket5.setVisible(true); break;
+                case 5:  ticket6.setVisible(true); break;
+            }
             panel1.setVisible(false);
             panel2.setVisible(false);
             panel3.setVisible(true);
@@ -512,7 +519,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_endnummer2.setVisible(false);
             l_gesamtpreis.setVisible(false);
             b_pdf.setVisible(false);
-            ticket1.setVisible(true);
+            
         }
     }
     
