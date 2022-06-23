@@ -67,6 +67,13 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JButton b_zurück2;
     private JButton b_pdf;
     
+    private JLabel ticket1;
+    private JLabel ticket2;
+    private JLabel ticket3;
+    private JLabel ticket4;
+    private JLabel ticket5;
+    private JLabel ticket6;
+            
     public OBERFLAECHE()
     {
         
@@ -293,8 +300,44 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_pdf.setFont(b_pdf.getFont().deriveFont(20f));
         b_pdf.setVisible(true);
         b_pdf.setBackground(new Color(200,200,200));
+
+        ImageIcon picture = new ImageIcon(this.getClass().getResource("Test.png"));
+        ticket1 = new JLabel(picture);
+        ticket1.setLocation(200,200);
+        ticket1.setSize(600,600);
+        ticket1.setVisible(false);
         
+        ImageIcon picture2 = new ImageIcon(this.getClass().getResource("Test.png"));
+        ticket2 = new JLabel(picture);
+        ticket2.setLocation(200,200);
+        ticket2.setSize(600,600);
+        ticket2.setVisible(false);
         
+        ImageIcon picture3 = new ImageIcon(this.getClass().getResource("Exil des Schattens-Konzertkarte.jpg"));
+        ticket3 = new JLabel(picture);
+        ticket3.setLocation(200,200);
+        ticket3.setSize(600,600);
+        ticket3.setVisible(false);
+        
+        ImageIcon picture4 = new ImageIcon(this.getClass().getResource("Test.png"));
+        ticket4 = new JLabel(picture);
+        ticket4.setLocation(200,200);
+        ticket4.setSize(600,600);
+        ticket4.setVisible(false);
+        
+        ImageIcon picture5 = new ImageIcon(this.getClass().getResource("Test.png"));
+        ticket5 = new JLabel(picture);
+        ticket5.setLocation(200,200);
+        ticket5.setSize(600,600);
+        ticket5.setVisible(false);
+        
+        ImageIcon picture6 = new ImageIcon(this.getClass().getResource("Test.png"));
+        ticket6 = new JLabel(picture);
+        ticket6.setLocation(200,200);
+        ticket6.setSize(600,600);
+        ticket6.setVisible(false);
+        
+                
         /**Zusatz*/
         FensterAufbauenV1();    
         
@@ -341,6 +384,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.add(l_endnummer2);
         panel3.add(l_gesamtpreis);
         panel3.add(b_pdf);
+        panel3.add(ticket1);
+        
         
         b_zurück2.addActionListener(this);
         b_pdf.addActionListener(this);
@@ -416,7 +461,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         if(ae.getSource()==this.b_auswahlbestätigen){
             panel1.setVisible(false);
             panel2.setVisible(false);
-            panel3.setVisible(true);
+            panel3.setVisible(false);
         }
         
         int selection = cb_anzahl.getSelectedIndex();
@@ -437,6 +482,16 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             case 4:  l_endnummer2.setText("5 - Trailerpark"); break;
             case 5:  l_endnummer2.setText("6 - Rammstein"); break;
             }
+            
+        int selection3 = cb_konzertnummer.getSelectedIndex();
+        switch (selection2){
+            case 0:  ticket1.setVisible(true); break;
+            case 1:  ticket2.setVisible(true); break;
+            case 2:  ticket3.setVisible(true); break;
+            case 3:  ticket4.setVisible(true); break;
+            case 4:  ticket5.setVisible(true); break;
+            case 5:  ticket6.setVisible(true); break;
+            }
                 
         
         /**Rechnungsfenster*/
@@ -448,7 +503,16 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         if(ae.getSource()==this.b_pdf){
             panel1.setVisible(false);
             panel2.setVisible(false);
-            panel3.setVisible(false);
+            panel3.setVisible(true);
+            l_rechnung.setVisible(false);
+            b_zurück2.setVisible(false);
+            l_gesamtzahl.setVisible(false);
+            l_endnummer.setVisible(false);
+            l_gesamtzahl2.setVisible(false);
+            l_endnummer2.setVisible(false);
+            l_gesamtpreis.setVisible(false);
+            b_pdf.setVisible(false);
+            ticket1.setVisible(true);
         }
     }
     
@@ -493,7 +557,13 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_endnummer2.setVisible(true);
         l_gesamtpreis.setVisible(true);
         b_pdf.setVisible(true);
-        
+        ticket1.setVisible(false);
+        ticket2.setVisible(false);
+        ticket3.setVisible(false);
+        ticket4.setVisible(false);
+        ticket5.setVisible(false);
+        ticket6.setVisible(false);
+               
         panel3.setVisible(true);        
     }
 }
