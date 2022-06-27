@@ -49,6 +49,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JButton b_beenden;
     private JButton b_anmelden;
     
+    private JButton b_bneingabe;
+    private JButton b_pweingabe;
+    
     
     /**JPanel2 zur Bestellungsauswahl für BEIDE Altersgruppen; es wird beim Ausführen mit setVisible bearbeitet*/
     private JLabel l_bestellung;
@@ -153,22 +156,40 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_passwort.setSize(200,100);
         l_passwort.setFont(l_passwort.getFont().deriveFont(24f));
         
+        b_bneingabe = new JButton();
+        b_bneingabe.setText("Benutzername eingeben...");
+        b_bneingabe.setLocation(500,250);
+        b_bneingabe.setSize(300,100);
+        b_bneingabe.setEnabled(true);
+        b_bneingabe.setFont(b_bneingabe.getFont().deriveFont(20f));
+        b_bneingabe.setVisible(false);
+        b_bneingabe.setBackground(new Color(255,255,255));
+                
+        b_pweingabe = new JButton();
+        b_pweingabe.setText("Passwort eingeben...");
+        b_pweingabe.setLocation(500,400);
+        b_pweingabe.setSize(300,100);
+        b_pweingabe.setEnabled(true);
+        b_pweingabe.setFont(b_pweingabe.getFont().deriveFont(20f));
+        b_pweingabe.setVisible(false);
+        b_pweingabe.setBackground(new Color(255,255,255));
+        
         tf_benutzername = new JTextField();
-        tf_benutzername.setText("Benutzername eingeben...");
+        tf_benutzername.setText("");
         tf_benutzername.setLocation(500,250);
         tf_benutzername.setSize(300,100);
         tf_benutzername.setEnabled(true);
         tf_benutzername.setFont(tf_benutzername.getFont().deriveFont(20f));
-        tf_benutzername.setVisible(true);
+        tf_benutzername.setVisible(false);
         tf_benutzername.setHorizontalAlignment(JTextField.CENTER);
         
         tf_passwort = new JTextField();
-        tf_passwort.setText("Passwort eingeben...");
+        tf_passwort.setText("");
         tf_passwort.setLocation(500,400);
         tf_passwort.setSize(300,100);
         tf_passwort.setEnabled(true);
         tf_passwort.setFont(tf_passwort.getFont().deriveFont(20f));
-        tf_passwort.setVisible(true);
+        tf_passwort.setVisible(false);
         tf_passwort.setHorizontalAlignment(JTextField.CENTER);
         
         b_17 = new JButton();
@@ -206,7 +227,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_anmelden.setFont(b_anmelden.getFont().deriveFont(20f));
         b_anmelden.setVisible(true);
         b_anmelden.setBackground(new Color(200,200,200));
-        
+           
         
         /**Bestellbild*/
         l_bestellung = new JLabel();
@@ -377,6 +398,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel1.add(b_beenden);
         panel1.add(b_anmelden);
         panel1.add(l_logo);
+        panel1.add(b_bneingabe);
+        panel1.add(b_pweingabe);
         
         
         b_start.addActionListener(this);
@@ -384,6 +407,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_18.addActionListener(this);
         b_beenden.addActionListener(this);
         b_anmelden.addActionListener(this);
+        b_bneingabe.addActionListener(this);
+        b_pweingabe.addActionListener(this);
         
         
         //Für Bestellbild
@@ -394,7 +419,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel2.add(b_auswahlbestätigen);
         panel2.add(cb_konzertnummer);
         panel2.add(cb_anzahl);
-                panel2.add(l_logo2);
+        panel2.add(l_logo2);
         
         
         
@@ -447,8 +472,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_anmeldung.setVisible(true);
             l_benutzername.setVisible(true);
             l_passwort.setVisible(true);
-            tf_benutzername.setVisible(true);
-            tf_passwort.setVisible(true);
+            tf_benutzername.setVisible(false);
+            tf_passwort.setVisible(false);
             b_17.setVisible(true);
             b_18.setVisible(true);
             b_beenden.setVisible(true);
@@ -456,6 +481,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            b_bneingabe.setVisible(true);
+            b_pweingabe.setVisible(true);
         }
         
         if(ae.getSource()==this.b_anmelden){
@@ -483,6 +510,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            b_bneingabe.setVisible(false);
+            b_pweingabe.setVisible(false);
         }
         
         if(ae.getSource()==this.b_17){
@@ -491,6 +520,10 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            b_pweingabe.setVisible(true);
+            b_bneingabe.setVisible(true);
+            tf_benutzername.setVisible(false);
+            tf_passwort.setVisible(false);
         }
         
         if(ae.getSource()==this.b_18){
@@ -499,6 +532,24 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            b_pweingabe.setVisible(true);
+            b_bneingabe.setVisible(true);
+            tf_benutzername.setVisible(false);
+            tf_passwort.setVisible(false);
+        }
+        
+        if(ae.getSource()==this.b_bneingabe){
+            b_bneingabe.setVisible(false);
+            b_pweingabe.setVisible(true);
+            tf_passwort.setVisible(false);
+            tf_benutzername.setVisible(true);
+        }
+        
+        if(ae.getSource()==this.b_pweingabe){
+            b_pweingabe.setVisible(false);
+            b_bneingabe.setVisible(true);
+            tf_benutzername.setVisible(false);
+            tf_passwort.setVisible(true);
         }
         
         
@@ -509,6 +560,11 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            b_pweingabe.setVisible(true);
+            b_bneingabe.setVisible(true);
+            tf_benutzername.setVisible(false);
+            tf_passwort.setVisible(false);
+            
         }
         
         if(ae.getSource()==this.b_auswahlbestätigen){
@@ -593,6 +649,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_logo.setVisible(true);
         l_logo2.setVisible(true);
         l_logo3.setVisible(true);
+        b_bneingabe.setVisible(false);
+        b_pweingabe.setVisible(false);
         
         panel1.setVisible(true);
 
