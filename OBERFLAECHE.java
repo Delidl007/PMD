@@ -31,6 +31,10 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JPanel panel1;
     private JPanel panel2;
     private JPanel panel3;
+    
+    private JLabel l_logo;
+    private JLabel l_logo2;
+    private JLabel l_logo3;
    
     
     /**JPanel1 zur Anmeldung am Anfang*/
@@ -77,24 +81,13 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     public OBERFLAECHE()
     {
         
-        
-        /**Anmeldebild*/
-        
-        b_start = new JButton();
-        b_start.setText("Start");
-        b_start.setLocation(550,750);
-        b_start.setSize(200,100);
-        b_start.setEnabled(true);
-        b_start.setFont(b_start.getFont().deriveFont(20f));
-        b_start.setVisible(true);
-        b_start.setBackground(new Color(200,200,200));
-        
         panel1 = new JPanel ();
         panel1.setLocation(40, 40);
         panel1.setSize (876,942);
         panel1.setVisible(true);
         panel1.setLayout(null);
         panel1.setBorder(new EtchedBorder());
+        panel1.setBackground(new Color(255,255,255));
         
         panel2 = new JPanel ();
         panel2.setLocation(40, 40);
@@ -110,6 +103,36 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.setLayout(null);
         panel3.setBorder(new EtchedBorder());
         
+        ImageIcon pictureL = new ImageIcon(this.getClass().getResource("Logo-OG.jpg"));
+        l_logo = new JLabel(pictureL);
+        l_logo.setLocation(10,10);
+        l_logo.setSize(200,100);
+        l_logo.setVisible(true);
+        
+        ImageIcon pictureL2 = new ImageIcon(this.getClass().getResource("Logo-OG.jpg"));
+        l_logo2 = new JLabel(pictureL2);
+        l_logo2.setLocation(10,10);
+        l_logo2.setSize(200,100);
+        l_logo2.setVisible(true);
+                
+        ImageIcon pictureL3 = new ImageIcon(this.getClass().getResource("Logo-OG.jpg"));
+        l_logo3 = new JLabel(pictureL3);
+        l_logo3.setLocation(10,10);
+        l_logo3.setSize(200,100);
+        l_logo3.setVisible(true);
+        
+        
+        
+        /**Anmeldebild*/
+        b_start = new JButton();
+        b_start.setText("Start");
+        b_start.setLocation(550,750);
+        b_start.setSize(200,100);
+        b_start.setEnabled(true);
+        b_start.setFont(b_start.getFont().deriveFont(20f));
+        b_start.setVisible(true);
+        b_start.setBackground(new Color(200,200,200));
+                
         l_anmeldung = new JLabel();
         l_anmeldung.setText("Anmeldung");
         l_anmeldung.setLocation(40,0);
@@ -309,11 +332,10 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         ImageIcon picture2 = new ImageIcon(this.getClass().getResource("Test.png"));
         ticket2 = new JLabel(picture2);
-        ticket2.setLocation(200,200);
-        ticket2.setSize(600,600);
+        ticket2.setLocation(50,200);
+        ticket2.setSize(800,600);
         ticket2.setVisible(false);
-        
-       
+               
         ImageIcon picture3 = new ImageIcon(this.getClass().getResource("Exil des Schattens-Konzertkarte.jpg"));
         ticket3 = new JLabel(picture3);
         ticket3.setLocation(50,200);
@@ -322,20 +344,20 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         ImageIcon picture4 = new ImageIcon(this.getClass().getResource("Die Toten Hosen-Konzertkarte.jpg"));
         ticket4 = new JLabel(picture4);
-        ticket4.setLocation(200,200);
-        ticket4.setSize(600,600);
+        ticket4.setLocation(50,200);
+        ticket4.setSize(800,600);
         ticket4.setVisible(false);
         
-        ImageIcon picture5 = new ImageIcon(this.getClass().getResource("Trailerpark-Konzertkarte.jgp"));
+        ImageIcon picture5 = new ImageIcon(this.getClass().getResource("Trailerpark-Konzertkarte.jpg"));
         ticket5 = new JLabel(picture5);
-        ticket5.setLocation(200,200);
-        ticket5.setSize(600,600);
+        ticket5.setLocation(50,200);
+        ticket5.setSize(800,600);
         ticket5.setVisible(false);
         
         ImageIcon picture6 = new ImageIcon(this.getClass().getResource("Rammstein-Konzertkarte.jpg"));
         ticket6 = new JLabel(picture6);
-        ticket6.setLocation(200,200);
-        ticket6.setSize(600,600);
+        ticket6.setLocation(50,200);
+        ticket6.setSize(800,600);
         ticket6.setVisible(false);
         
                 
@@ -354,6 +376,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel1.add(b_18);
         panel1.add(b_beenden);
         panel1.add(b_anmelden);
+        panel1.add(l_logo);
+        
         
         b_start.addActionListener(this);
         b_17.addActionListener(this);
@@ -370,6 +394,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel2.add(b_auswahlbestätigen);
         panel2.add(cb_konzertnummer);
         panel2.add(cb_anzahl);
+                panel2.add(l_logo2);
+        
+        
         
         b_zurück1.addActionListener(this);
         b_auswahlbestätigen.addActionListener(this);
@@ -391,6 +418,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.add(ticket4);
         panel3.add(ticket5);
         panel3.add(ticket6);
+        panel3.add(l_logo3);
+        
         
         
         b_zurück2.addActionListener(this);
@@ -424,11 +453,17 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_18.setVisible(true);
             b_beenden.setVisible(true);
             b_anmelden.setVisible(true);
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
         
         if(ae.getSource()==this.b_anmelden){
             panel1.setVisible(false);
             panel2.setVisible(true);
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
         
         if(ae.getSource()==this.b_beenden){
@@ -445,16 +480,25 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_beenden.setVisible(false);
             b_anmelden.setVisible(false);
             b_start.setVisible(true);
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
         
         if(ae.getSource()==this.b_17){
             b_17.setBackground(new Color(8,224,28));
             b_18.setBackground(new Color(200,200,200));
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
         
         if(ae.getSource()==this.b_18){
             b_18.setBackground(new Color(8,224,28));
             b_17.setBackground(new Color(200,200,200));
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
         
         
@@ -462,12 +506,18 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         if(ae.getSource()==this.b_zurück1){
             panel1.setVisible(true);
             panel2.setVisible(false);
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
         
         if(ae.getSource()==this.b_auswahlbestätigen){
             panel1.setVisible(false);
             panel2.setVisible(false);
             panel3.setVisible(true);
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
         
         int selection = cb_anzahl.getSelectedIndex();
@@ -496,6 +546,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         if(ae.getSource()==this.b_zurück2){
             panel2.setVisible(true);
             panel3.setVisible(false);
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
         
         if(ae.getSource()==this.b_pdf){
@@ -519,7 +572,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_endnummer2.setVisible(false);
             l_gesamtpreis.setVisible(false);
             b_pdf.setVisible(false);
-            
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
         }
     }
     
@@ -535,6 +590,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_18.setVisible(false);
         b_beenden.setVisible(false);
         b_anmelden.setVisible(false);
+        l_logo.setVisible(true);
+        l_logo2.setVisible(true);
+        l_logo3.setVisible(true);
         
         panel1.setVisible(true);
 
@@ -549,6 +607,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_auswahlbestätigen.setVisible(true);
         cb_konzertnummer.setVisible(true);
         cb_anzahl.setVisible(true);
+        l_logo.setVisible(true);
+        l_logo2.setVisible(true);
+        l_logo3.setVisible(true);
         
         panel2.setVisible(true);
         
@@ -570,7 +631,11 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         ticket4.setVisible(false);
         ticket5.setVisible(false);
         ticket6.setVisible(false);
+        l_logo.setVisible(true);
+        l_logo2.setVisible(true);
+        l_logo3.setVisible(true);
                
-        panel3.setVisible(true);        
+        panel3.setVisible(true);
+        
     }
 }
