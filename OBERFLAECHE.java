@@ -320,19 +320,19 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         ticket3.setSize(800,600);
         ticket3.setVisible(false);
         
-        ImageIcon picture4 = new ImageIcon(this.getClass().getResource("Test.png"));
+        ImageIcon picture4 = new ImageIcon(this.getClass().getResource("Die Toten Hosen-Konzertkarte.jpg"));
         ticket4 = new JLabel(picture4);
         ticket4.setLocation(200,200);
         ticket4.setSize(600,600);
         ticket4.setVisible(false);
         
-        ImageIcon picture5 = new ImageIcon(this.getClass().getResource("Test.png"));
+        ImageIcon picture5 = new ImageIcon(this.getClass().getResource("Trailerpark-Konzertkarte.jgp"));
         ticket5 = new JLabel(picture5);
         ticket5.setLocation(200,200);
         ticket5.setSize(600,600);
         ticket5.setVisible(false);
         
-        ImageIcon picture6 = new ImageIcon(this.getClass().getResource("Test.png"));
+        ImageIcon picture6 = new ImageIcon(this.getClass().getResource("Rammstein-Konzertkarte.jpg"));
         ticket6 = new JLabel(picture6);
         ticket6.setLocation(200,200);
         ticket6.setSize(600,600);
