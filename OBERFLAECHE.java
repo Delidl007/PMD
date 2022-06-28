@@ -72,6 +72,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JLabel l_gesamtzahl2;
     private JLabel l_endnummer2;
     private JButton b_zurück2;
+    private JButton b_zurück3;
     private JButton b_pdf;
     
     private JLabel ticket1;
@@ -264,7 +265,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         cb_konzertnummer.setSize(300,50);
         cb_konzertnummer.addItem("1 - Andreas Gabalier");
         cb_konzertnummer.addItem("2 - Donikkl");
-        cb_konzertnummer.addItem("3 - Exil des Schatten");
+        cb_konzertnummer.addItem("3 - Exil des Schattens");
         cb_konzertnummer.addItem("4 - Die Toten Hosen");
         cb_konzertnummer.addItem("5 - Trailerpark");
         cb_konzertnummer.addItem("6 - Rammstein");
@@ -305,6 +306,15 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück2.setFont(b_zurück2.getFont().deriveFont(20f));
         b_zurück2.setVisible(true);
         b_zurück2.setBackground(new Color(200,200,200));
+        
+        b_zurück3 = new JButton();
+        b_zurück3.setText("Zurück");
+        b_zurück3.setLocation(100,750);
+        b_zurück3.setSize(200,100);
+        b_zurück3.setEnabled(true);
+        b_zurück3.setFont(b_zurück1.getFont().deriveFont(20f));
+        b_zurück3.setVisible(true);
+        b_zurück3.setBackground(new Color(200,200,200));
         
         l_gesamtzahl = new JLabel();
         l_gesamtzahl.setText("Anzahl der Karten");
@@ -431,6 +441,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         //Für Rechnungsbild
         panel3.add(l_rechnung);
         panel3.add(b_zurück2);
+        panel3.add(b_zurück3);
         panel3.add(l_gesamtzahl);
         panel3.add(l_endnummer);
         panel3.add(l_gesamtzahl2);
@@ -448,6 +459,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         
         b_zurück2.addActionListener(this);
+        b_zurück3.addActionListener(this);
         b_pdf.addActionListener(this);
         
         
