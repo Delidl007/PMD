@@ -322,7 +322,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_gesamtzahl = new JLabel();
         l_gesamtzahl.setText("Anzahl der Karten");
         l_gesamtzahl.setLocation(100,250);
-        l_gesamtzahl.setSize(250,100);
+        l_gesamtzahl.setSize(300,100);
         l_gesamtzahl.setFont(l_gesamtzahl.getFont().deriveFont(24f));
         
         l_endnummer = new JLabel();
