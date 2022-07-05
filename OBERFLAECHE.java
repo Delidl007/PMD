@@ -68,6 +68,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     /**JPanel3 für Rechnung am Ende*/
     private JLabel l_rechnung;
     private JLabel l_gesamtpreis;
+    private JLabel l_gesamtpreis2;
     private JLabel l_gesamtzahl;
     private JLabel l_endnummer;
     private JLabel l_gesamtzahl2;
@@ -291,6 +292,18 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_auswahlbestätigen.setVisible(true);
         b_auswahlbestätigen.setBackground(new Color(200,200,200));
         
+        ImageIcon pictureT17 = new ImageIcon(this.getClass().getResource("17-Tabelle.png"));
+        tabelle_17 = new JLabel(pictureT17);
+        tabelle_17.setLocation(50,200);
+        tabelle_17.setSize(800,600);
+        tabelle_17.setVisible(false);
+        
+        ImageIcon pictureT18 = new ImageIcon(this.getClass().getResource("18+Tabelle.png"));
+        tabelle_18 = new JLabel(pictureT18);
+        tabelle_18.setLocation(50,200);
+        tabelle_18.setSize(800,600);
+        tabelle_18.setVisible(false);
+        
         
         /**Rechnungsbild*/
         l_rechnung = new JLabel();
@@ -348,6 +361,12 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_gesamtpreis.setLocation(100,550);
         l_gesamtpreis.setSize(250,100);
         l_gesamtpreis.setFont(l_gesamtpreis.getFont().deriveFont(24f));
+        
+        l_gesamtpreis2 = new JLabel();
+        l_gesamtpreis2.setText("");
+        l_gesamtpreis2.setLocation(500,550);
+        l_gesamtpreis2.setSize(250,100);
+        l_gesamtpreis2.setFont(l_gesamtpreis2.getFont().deriveFont(24f));
         
         b_pdf = new JButton();
         b_pdf.setText("pdf drucken");
@@ -450,6 +469,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.add(l_gesamtzahl2);
         panel3.add(l_endnummer2);
         panel3.add(l_gesamtpreis);
+        panel3.add(l_gesamtpreis2);
         panel3.add(b_pdf);
         panel3.add(ticket1);
         panel3.add(ticket2);
@@ -499,6 +519,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_bneingabe.setVisible(true);
             b_pweingabe.setVisible(true);
             panel1.repaint();
+            
         }
         
         if(ae.getSource()==this.b_anmelden){
@@ -507,6 +528,18 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            // int selection4 = ;
+            // switch (selection4){
+                // case 0:  l_endnummer2.setText("1 - Andreas Gabailer"); break;
+                // case 1:  l_endnummer2.setText("2 - Donikkl"); break;
+                // case 2:  l_endnummer2.setText("3 - Exil des Schattens"); break;
+                // case 3:  l_endnummer2.setText("4 - Die Toten Hosen"); break;
+                // case 4:  l_endnummer2.setText("5 - Trailerpark"); break;
+                // case 5:  l_endnummer2.setText("6 - Rammstein"); break;
+            // }
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         if(ae.getSource()==this.b_beenden){
@@ -528,6 +561,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo3.setVisible(true);
             b_bneingabe.setVisible(false);
             b_pweingabe.setVisible(false);
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         if(ae.getSource()==this.b_17){
@@ -540,6 +576,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_bneingabe.setVisible(true);
             tf_benutzername.setVisible(false);
             tf_passwort.setVisible(false);
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         if(ae.getSource()==this.b_18){
@@ -552,6 +591,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_bneingabe.setVisible(true);
             tf_benutzername.setVisible(false);
             tf_passwort.setVisible(false);
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         if(ae.getSource()==this.b_bneingabe){
@@ -559,6 +601,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_pweingabe.setVisible(true);
             tf_passwort.setVisible(false);
             tf_benutzername.setVisible(true);
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         if(ae.getSource()==this.b_pweingabe){
@@ -566,6 +611,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_bneingabe.setVisible(true);
             tf_benutzername.setVisible(false);
             tf_passwort.setVisible(true);
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         
@@ -580,9 +628,58 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_bneingabe.setVisible(true);
             tf_benutzername.setVisible(false);
             tf_passwort.setVisible(false);
-            
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
+        int selection4 = cb_konzertnummer.getSelectedIndex();
+        int selection5 = cb_anzahl.getSelectedIndex();
+        switch (selection4){
+            case 0: switch (selection5){
+                        case 0: l_gesamtpreis2.setText("47,90 €"); break;
+                        case 1: l_gesamtpreis2.setText("95,80 €"); break;
+                        case 2: l_gesamtpreis2.setText("143,70 €"); break;
+                        case 3: l_gesamtpreis2.setText("191,60 €"); break;
+                        case 4: l_gesamtpreis2.setText("239,50 €"); break;
+                    }; break;
+            case 1: switch (selection5){
+                        case 0: l_gesamtpreis2.setText("13,90 €"); break;
+                        case 1: l_gesamtpreis2.setText("27,80 €"); break;
+                        case 2: l_gesamtpreis2.setText("41,70 €"); break;
+                        case 3: l_gesamtpreis2.setText("55,60 €"); break;
+                        case 4: l_gesamtpreis2.setText("69,50 €"); break;
+                    }; break;
+            case 2: switch (selection5){
+                        case 0: l_gesamtpreis2.setText("24,00 €"); break;
+                        case 1: l_gesamtpreis2.setText("48,00 €"); break;
+                        case 2: l_gesamtpreis2.setText("72,00 €"); break;
+                        case 3: l_gesamtpreis2.setText("96,00 €"); break;
+                        case 4: l_gesamtpreis2.setText("120,00 €"); break;
+                    }; break;
+            case 3: switch (selection5){
+                        case 0: l_gesamtpreis2.setText("71,50 €"); break;
+                        case 1: l_gesamtpreis2.setText("143,00 €"); break;
+                        case 2: l_gesamtpreis2.setText("214,50 €"); break;
+                        case 3: l_gesamtpreis2.setText("286,00 €"); break;
+                        case 4: l_gesamtpreis2.setText("357,50 €"); break;
+                    }; break;
+            case 4: switch (selection5){
+                        case 0: l_gesamtpreis2.setText("49,95 €"); break;
+                        case 1: l_gesamtpreis2.setText("99,90 €"); break;
+                        case 2: l_gesamtpreis2.setText("149,85 €"); break;
+                        case 3: l_gesamtpreis2.setText("199,80 €"); break;
+                        case 4: l_gesamtpreis2.setText("249,75 €"); break;
+                    }; break;
+            case 5: switch (selection5){
+                        case 0: l_gesamtpreis2.setText("72,00 €"); break;
+                        case 1: l_gesamtpreis2.setText("144,00 €"); break;
+                        case 2: l_gesamtpreis2.setText("216,00 €"); break;
+                        case 3: l_gesamtpreis2.setText("288,00 €"); break;
+                        case 4: l_gesamtpreis2.setText("360,00 €"); break;
+                    }; break;
+        }
+            
         if(ae.getSource()==this.b_auswahlbestätigen){
             panel1.setVisible(false);
             panel2.setVisible(false);
@@ -590,6 +687,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         int selection = cb_anzahl.getSelectedIndex();
@@ -621,6 +721,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         
@@ -648,7 +751,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             ticket4.setVisible(false);
             ticket5.setVisible(false);
             ticket6.setVisible(false);
-            
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
         
         
@@ -678,6 +783,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
             b_zurück3.setVisible(true);
+            panel1.repaint();
+            panel2.repaint();
+            panel3.repaint();
         }
     }
     
