@@ -619,6 +619,28 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo3.setVisible(true);
         }
         
+        
+        if(ae.getSource()==this.b_zurück3){
+            
+            panel1.setVisible(true);
+            panel2.setVisible(false);
+            panel3.setVisible(false);
+            l_rechnung.setVisible(false);
+            b_zurück2.setVisible(false);
+            l_gesamtzahl.setVisible(false);
+            l_endnummer.setVisible(false);
+            l_gesamtzahl2.setVisible(false);
+            l_endnummer2.setVisible(false);
+            l_gesamtpreis.setVisible(false);
+            b_pdf.setVisible(false);
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
+            
+        }
+        
+        
+        
         if(ae.getSource()==this.b_pdf){
             int selection3 = cb_konzertnummer.getSelectedIndex();
              switch (selection2){
