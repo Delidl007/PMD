@@ -9,7 +9,7 @@ Online Plattform zum Kauf von Konzertkarten
 4. Wenn man sich angemeldet hat, wählt man ein Konzert und die Anzahl der Karten aus.
 5. Butto 'Auswhal bestätigen' klicken.
 6. Jetzt erscheint ein Rechnungsfenster. Dort wird das Konzert, die Anzahl der Karten und der erechnete Gesamtpreis angezeigt.
-7. Button 'pdf drucken' klicken und eine individualisierte Konzertkarte erscheint
+7. Button 'pdf drucken' klicken und eine individualisierte Konzertkarte erscheint.
 
 
 
