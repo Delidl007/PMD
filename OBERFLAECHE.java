@@ -528,8 +528,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
-            // int selection4 = ;
-            // switch (selection4){
+            
+            // switch (selection6){
                 // case 0:  l_endnummer2.setText("1 - Andreas Gabailer"); break;
                 // case 1:  l_endnummer2.setText("2 - Donikkl"); break;
                 // case 2:  l_endnummer2.setText("3 - Exil des Schattens"); break;
@@ -736,14 +736,20 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_zurück2.setVisible(true);
             l_gesamtzahl.setVisible(true);
             l_endnummer.setVisible(true);
+            
             l_gesamtzahl2.setVisible(true);
+            l_gesamtzahl2.setLocation(500,250);
+            l_gesamtzahl2.setFont(l_gesamtzahl2.getFont().deriveFont(24f));
+            
             l_endnummer2.setVisible(true);
             l_gesamtpreis.setVisible(true);
+            l_gesamtpreis2.setVisible(true);
             b_pdf.setVisible(true);
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
             b_zurück3.setVisible(false);
+            
 
             ticket1.setVisible(false);
             ticket2.setVisible(false);
@@ -775,9 +781,14 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_zurück2.setVisible(false);
             l_gesamtzahl.setVisible(false);
             l_endnummer.setVisible(false);
-            l_gesamtzahl2.setVisible(false);
+            
+            l_gesamtzahl2.setVisible(true);
+            l_gesamtzahl2.setLocation(100,250);
+            l_gesamtzahl2.setFont(l_gesamtzahl2.getFont().deriveFont(30f));
+            
             l_endnummer2.setVisible(false);
             l_gesamtpreis.setVisible(false);
+            l_gesamtpreis2.setVisible(false);
             b_pdf.setVisible(false);
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
