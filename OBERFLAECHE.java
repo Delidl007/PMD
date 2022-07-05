@@ -99,6 +99,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel2.setVisible(true);
         panel2.setLayout(null);
         panel2.setBorder(new EtchedBorder());
+        panel2.setBackground(new Color(255,255,255));
         
         panel3 = new JPanel ();
         panel3.setLocation(40, 40);
@@ -106,6 +107,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel3.setVisible(true);
         panel3.setLayout(null);
         panel3.setBorder(new EtchedBorder());
+        panel3.setBackground(new Color(255,255,255));
         
         ImageIcon pictureL = new ImageIcon(this.getClass().getResource("Logo-OG.jpg"));
         l_logo = new JLabel(pictureL);
@@ -355,13 +357,13 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_pdf.setVisible(true);
         b_pdf.setBackground(new Color(200,200,200));
 
-        ImageIcon picture = new ImageIcon(this.getClass().getResource("Test.png"));
+        ImageIcon picture = new ImageIcon(this.getClass().getResource("AndreasGabalier-Konzertkarte (1).jpg"));
         ticket1 = new JLabel(picture);
         ticket1.setLocation(200,200);
         ticket1.setSize(600,600);
         ticket1.setVisible(false);
         
-        ImageIcon picture2 = new ImageIcon(this.getClass().getResource("Test.png"));
+        ImageIcon picture2 = new ImageIcon(this.getClass().getResource("Donikkl-Konzertkarte.jpg"));
         ticket2 = new JLabel(picture2);
         ticket2.setLocation(50,200);
         ticket2.setSize(800,600);
@@ -495,6 +497,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo3.setVisible(true);
             b_bneingabe.setVisible(true);
             b_pweingabe.setVisible(true);
+            panel1.repaint();
         }
         
         if(ae.getSource()==this.b_anmelden){
