@@ -286,7 +286,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_auswahlbestätigen = new JButton();
         b_auswahlbestätigen.setText("Auswahl bestätigen");
         b_auswahlbestätigen.setLocation(550,750);
-        b_auswahlbestätigen.setSize(200,100);
+        b_auswahlbestätigen.setSize(250,100);
         b_auswahlbestätigen.setEnabled(true);
         b_auswahlbestätigen.setFont(b_auswahlbestätigen.getFont().deriveFont(20f));
         b_auswahlbestätigen.setVisible(true);
@@ -324,9 +324,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück2.setBackground(new Color(200,200,200));
         
         b_zurück3 = new JButton();
-        b_zurück3.setText("Zurück zu Anmeldung");
+        b_zurück3.setText("Zurück");
         b_zurück3.setLocation(100,750);
-        b_zurück3.setSize(250,100);
+        b_zurück3.setSize(200,100);
         b_zurück3.setEnabled(true);
         b_zurück3.setFont(b_zurück1.getFont().deriveFont(20f));
         b_zurück3.setVisible(false);
@@ -335,7 +335,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_gesamtzahl = new JLabel();
         l_gesamtzahl.setText("Anzahl der Karten");
         l_gesamtzahl.setLocation(100,250);
-        l_gesamtzahl.setSize(250,100);
+        l_gesamtzahl.setSize(300,100);
         l_gesamtzahl.setFont(l_gesamtzahl.getFont().deriveFont(24f));
         
         l_endnummer = new JLabel();
@@ -347,7 +347,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_gesamtzahl2 = new JLabel();
         l_gesamtzahl2.setText("Anzahl der Karten");
         l_gesamtzahl2.setLocation(500,250);
-        l_gesamtzahl2.setSize(250,100);
+        l_gesamtzahl2.setSize(300,100);
         l_gesamtzahl2.setFont(l_gesamtzahl2.getFont().deriveFont(24f));
         
         l_endnummer2 = new JLabel();
