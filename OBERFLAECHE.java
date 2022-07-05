@@ -57,12 +57,13 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JLabel l_bestellung;
     private JLabel l_anzahl;
     private JLabel l_konzertnummer;
-    private JTable t;
     private JComboBox cb_anzahl;
     private JComboBox cb_konzertnummer;
     private JButton b_zurück1;
     private JButton b_auswahlbestätigen;
     
+    private JLabel tabelle_17;
+    private JLabel tabelle_18;
     
     /**JPanel3 für Rechnung am Ende*/
     private JLabel l_rechnung;
@@ -359,8 +360,8 @@ public class OBERFLAECHE extends JFrame implements ActionListener
 
         ImageIcon picture = new ImageIcon(this.getClass().getResource("AndreasGabalier-Konzertkarte (1).jpg"));
         ticket1 = new JLabel(picture);
-        ticket1.setLocation(200,200);
-        ticket1.setSize(600,600);
+        ticket1.setLocation(50,200);
+        ticket1.setSize(800,600);
         ticket1.setVisible(false);
         
         ImageIcon picture2 = new ImageIcon(this.getClass().getResource("Donikkl-Konzertkarte.jpg"));
