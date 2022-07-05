@@ -310,9 +310,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück2.setBackground(new Color(200,200,200));
         
         b_zurück3 = new JButton();
-        b_zurück3.setText("Zurück");
+        b_zurück3.setText("Zurück zu Anmeldung");
         b_zurück3.setLocation(100,750);
-        b_zurück3.setSize(200,100);
+        b_zurück3.setSize(250,100);
         b_zurück3.setEnabled(true);
         b_zurück3.setFont(b_zurück1.getFont().deriveFont(20f));
         b_zurück3.setVisible(true);
