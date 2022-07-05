@@ -311,9 +311,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück2.setBackground(new Color(200,200,200));
         
         b_zurück3 = new JButton();
-        b_zurück3.setText("Zurück");
+        b_zurück3.setText("Zurück zu Anmeldung");
         b_zurück3.setLocation(100,750);
-        b_zurück3.setSize(200,100);
+        b_zurück3.setSize(250,100);
         b_zurück3.setEnabled(true);
         b_zurück3.setFont(b_zurück1.getFont().deriveFont(20f));
         b_zurück3.setVisible(false);
@@ -626,20 +626,22 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         if(ae.getSource()==this.b_zurück3){
             
-            panel1.setVisible(true);
+            panel1.setVisible(false);
             panel2.setVisible(false);
-            panel3.setVisible(false);
-            l_rechnung.setVisible(false);
-            b_zurück2.setVisible(false);
-            l_gesamtzahl.setVisible(false);
-            l_endnummer.setVisible(false);
-            l_gesamtzahl2.setVisible(false);
-            l_endnummer2.setVisible(false);
-            l_gesamtpreis.setVisible(false);
-            b_pdf.setVisible(false);
+            panel3.setVisible(true);
+            l_rechnung.setVisible(true);
+            b_zurück2.setVisible(true);
+            l_gesamtzahl.setVisible(true);
+            l_endnummer.setVisible(true);
+            l_gesamtzahl2.setVisible(true);
+            l_endnummer2.setVisible(true);
+            l_gesamtpreis.setVisible(true);
+            b_pdf.setVisible(true);
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            b_zurück3.setVisible(false);
+
             ticket1.setVisible(false);
             ticket2.setVisible(false);
             ticket3.setVisible(false);
