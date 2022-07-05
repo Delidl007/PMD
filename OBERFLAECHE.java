@@ -316,7 +316,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück3.setSize(200,100);
         b_zurück3.setEnabled(true);
         b_zurück3.setFont(b_zurück1.getFont().deriveFont(20f));
-        b_zurück3.setVisible(true);
+        b_zurück3.setVisible(false);
         b_zurück3.setBackground(new Color(200,200,200));
         
         l_gesamtzahl = new JLabel();
@@ -623,9 +623,37 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo3.setVisible(true);
         }
         
+        
+        if(ae.getSource()==this.b_zurück3){
+            
+            panel1.setVisible(true);
+            panel2.setVisible(false);
+            panel3.setVisible(false);
+            l_rechnung.setVisible(false);
+            b_zurück2.setVisible(false);
+            l_gesamtzahl.setVisible(false);
+            l_endnummer.setVisible(false);
+            l_gesamtzahl2.setVisible(false);
+            l_endnummer2.setVisible(false);
+            l_gesamtpreis.setVisible(false);
+            b_pdf.setVisible(false);
+            l_logo.setVisible(true);
+            l_logo2.setVisible(true);
+            l_logo3.setVisible(true);
+            ticket1.setVisible(false);
+            ticket2.setVisible(false);
+            ticket3.setVisible(false);
+            ticket4.setVisible(false);
+            ticket5.setVisible(false);
+            ticket6.setVisible(false);
+            
+        }
+        
+        
+        
         if(ae.getSource()==this.b_pdf){
             int selection3 = cb_konzertnummer.getSelectedIndex();
-             switch (selection2){
+             switch (selection3){
                 case 0:  ticket1.setVisible(true); break;
                 case 1:  ticket2.setVisible(true); break;
                 case 2:  ticket3.setVisible(true); break;
@@ -647,6 +675,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
+            b_zurück3.setVisible(true);
         }
     }
     
