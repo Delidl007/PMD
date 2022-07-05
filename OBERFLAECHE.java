@@ -285,7 +285,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_auswahlbestätigen = new JButton();
         b_auswahlbestätigen.setText("Auswahl bestätigen");
         b_auswahlbestätigen.setLocation(550,750);
-        b_auswahlbestätigen.setSize(200,100);
+        b_auswahlbestätigen.setSize(250,100);
         b_auswahlbestätigen.setEnabled(true);
         b_auswahlbestätigen.setFont(b_auswahlbestätigen.getFont().deriveFont(20f));
         b_auswahlbestätigen.setVisible(true);
