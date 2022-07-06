@@ -1,6 +1,6 @@
 
 
-public class LISTE
+public class LISTE extends Oberfläche implements ActionListener
 {
     private int anmeldedaten = new int[];
     
