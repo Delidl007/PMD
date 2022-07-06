@@ -58,7 +58,9 @@ public class OBERFLAECHE extends JFrame implements ActionListener
     private JLabel l_anzahl;
     private JLabel l_konzertnummer;
     private JComboBox cb_anzahl;
+    private JComboBox cb_anzahl2;
     private JComboBox cb_konzertnummer;
+    private JComboBox cb_konzertnummer2;
     private JButton b_zurück1;
     private JButton b_auswahlbestätigen;
     
@@ -139,7 +141,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_start.setEnabled(true);
         b_start.setFont(b_start.getFont().deriveFont(20f));
         b_start.setVisible(true);
-        b_start.setBackground(new Color(200,200,200));
+        b_start.setBackground(new Color(191,191,191));
                 
         l_anmeldung = new JLabel();
         l_anmeldung.setText("Anmeldung");
@@ -204,7 +206,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_17.setEnabled(true);
         b_17.setFont(b_17.getFont().deriveFont(20f));
         b_17.setVisible(true);
-        b_17.setBackground(new Color(200,200,200));
+        b_17.setBackground(new Color(191,191,191));
         
         b_18 = new JButton();
         b_18.setText("18+");
@@ -213,7 +215,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_18.setEnabled(true);
         b_18.setFont(b_18.getFont().deriveFont(20f));
         b_18.setVisible(true);
-        b_18.setBackground(new Color(200,200,200));
+        b_18.setBackground(new Color(191,191,191));
         
         b_beenden = new JButton();
         b_beenden.setText("Beenden");
@@ -222,7 +224,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_beenden.setEnabled(true);
         b_beenden.setFont(b_beenden.getFont().deriveFont(20f));
         b_beenden.setVisible(true);
-        b_beenden.setBackground(new Color(200,200,200));
+        b_beenden.setBackground(new Color(191,191,191));
         
         b_anmelden = new JButton();
         b_anmelden.setText("Anmelden");
@@ -231,7 +233,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_anmelden.setEnabled(true);
         b_anmelden.setFont(b_anmelden.getFont().deriveFont(20f));
         b_anmelden.setVisible(true);
-        b_anmelden.setBackground(new Color(200,200,200));
+        b_anmelden.setBackground(new Color(191,191,191));
            
         
         /**Bestellbild*/
@@ -263,16 +265,32 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         cb_anzahl.addItem("3 Karten");
         cb_anzahl.addItem("4 Karten");
         cb_anzahl.addItem("5 Karten");
+        
+        cb_anzahl2 = new JComboBox();
+        cb_anzahl2.setLocation(500,270);
+        cb_anzahl2.setSize(300,50);
+        cb_anzahl2.addItem("1 Karte");
+        cb_anzahl2.addItem("2 Karten");
+        cb_anzahl2.addItem("3 Karten");
+        cb_anzahl2.addItem("4 Karten");
+        cb_anzahl2.addItem("5 Karten");
                 
         cb_konzertnummer = new JComboBox();
         cb_konzertnummer.setLocation(500,430);
         cb_konzertnummer.setSize(300,50);
         cb_konzertnummer.addItem("1 - Andreas Gabalier");
         cb_konzertnummer.addItem("2 - Donikkl");
-        cb_konzertnummer.addItem("3 - Exil des Schattens");
         cb_konzertnummer.addItem("4 - Die Toten Hosen");
-        cb_konzertnummer.addItem("5 - Trailerpark");
-        cb_konzertnummer.addItem("6 - Rammstein");
+        
+        cb_konzertnummer2 = new JComboBox();
+        cb_konzertnummer2.setLocation(500,430);
+        cb_konzertnummer2.setSize(300,50);
+        cb_konzertnummer2.addItem("1 - Andreas Gabalier");
+        cb_konzertnummer2.addItem("2 - Donikkl");
+        cb_konzertnummer2.addItem("3 - Exil des Schattens");
+        cb_konzertnummer2.addItem("4 - Die Toten Hosen");
+        cb_konzertnummer2.addItem("5 - Trailerpark");
+        cb_konzertnummer2.addItem("6 - Rammstein");
         
         b_zurück1 = new JButton();
         b_zurück1.setText("Zurück");
@@ -281,7 +299,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück1.setEnabled(true);
         b_zurück1.setFont(b_zurück1.getFont().deriveFont(20f));
         b_zurück1.setVisible(true);
-        b_zurück1.setBackground(new Color(200,200,200));
+        b_zurück1.setBackground(new Color(191,191,191));
         
         b_auswahlbestätigen = new JButton();
         b_auswahlbestätigen.setText("Auswahl bestätigen");
@@ -290,17 +308,17 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_auswahlbestätigen.setEnabled(true);
         b_auswahlbestätigen.setFont(b_auswahlbestätigen.getFont().deriveFont(20f));
         b_auswahlbestätigen.setVisible(true);
-        b_auswahlbestätigen.setBackground(new Color(200,200,200));
+        b_auswahlbestätigen.setBackground(new Color(191,191,191));
         
-        ImageIcon pictureT17 = new ImageIcon(this.getClass().getResource("17-Tabelle.png"));
+        ImageIcon pictureT17 = new ImageIcon(this.getClass().getResource("Tabelle_17.jpg"));
         tabelle_17 = new JLabel(pictureT17);
-        tabelle_17.setLocation(50,200);
+        tabelle_17.setLocation(35,310);
         tabelle_17.setSize(800,600);
         tabelle_17.setVisible(false);
         
-        ImageIcon pictureT18 = new ImageIcon(this.getClass().getResource("18+Tabelle.png"));
+        ImageIcon pictureT18 = new ImageIcon(this.getClass().getResource("Tabelle_18.jpg"));
         tabelle_18 = new JLabel(pictureT18);
-        tabelle_18.setLocation(50,200);
+        tabelle_18.setLocation(35,310);
         tabelle_18.setSize(800,600);
         tabelle_18.setVisible(false);
         
@@ -321,7 +339,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück2.setEnabled(true);
         b_zurück2.setFont(b_zurück2.getFont().deriveFont(20f));
         b_zurück2.setVisible(true);
-        b_zurück2.setBackground(new Color(200,200,200));
+        b_zurück2.setBackground(new Color(191,191,191));
         
         b_zurück3 = new JButton();
         b_zurück3.setText("Zurück");
@@ -330,7 +348,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück3.setEnabled(true);
         b_zurück3.setFont(b_zurück1.getFont().deriveFont(20f));
         b_zurück3.setVisible(false);
-        b_zurück3.setBackground(new Color(200,200,200));
+        b_zurück3.setBackground(new Color(191,191,191));
         
         l_gesamtzahl = new JLabel();
         l_gesamtzahl.setText("Anzahl der Karten");
@@ -375,7 +393,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_pdf.setEnabled(true);
         b_pdf.setFont(b_pdf.getFont().deriveFont(20f));
         b_pdf.setVisible(true);
-        b_pdf.setBackground(new Color(200,200,200));
+        b_pdf.setBackground(new Color(191,191,191));
 
         ImageIcon picture = new ImageIcon(this.getClass().getResource("AndreasGabalier-Konzertkarte (1).jpg"));
         ticket1 = new JLabel(picture);
@@ -450,14 +468,21 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         panel2.add(b_zurück1);
         panel2.add(b_auswahlbestätigen);
         panel2.add(cb_konzertnummer);
+        panel2.add(cb_konzertnummer2);
         panel2.add(cb_anzahl);
+        panel2.add(cb_anzahl2);
         panel2.add(l_logo2);
+        panel2.add(tabelle_17);
+        panel2.add(tabelle_18);
         
         
         
         b_zurück1.addActionListener(this);
         b_auswahlbestätigen.addActionListener(this);
         cb_anzahl.addActionListener(this);
+        cb_anzahl2.addActionListener(this);
+        cb_konzertnummer.addActionListener(this);
+        cb_konzertnummer2.addActionListener(this);
         
         
         //Für Rechnungsbild
@@ -528,15 +553,6 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
-            
-            // switch (selection6){
-                // case 0:  l_endnummer2.setText("1 - Andreas Gabailer"); break;
-                // case 1:  l_endnummer2.setText("2 - Donikkl"); break;
-                // case 2:  l_endnummer2.setText("3 - Exil des Schattens"); break;
-                // case 3:  l_endnummer2.setText("4 - Die Toten Hosen"); break;
-                // case 4:  l_endnummer2.setText("5 - Trailerpark"); break;
-                // case 5:  l_endnummer2.setText("6 - Rammstein"); break;
-            // }
             panel1.repaint();
             panel2.repaint();
             panel3.repaint();
@@ -568,7 +584,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         
         if(ae.getSource()==this.b_17){
             b_17.setBackground(new Color(8,224,28));
-            b_18.setBackground(new Color(200,200,200));
+            b_18.setBackground(new Color(191,191,191));
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
@@ -576,24 +592,110 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_bneingabe.setVisible(true);
             tf_benutzername.setVisible(false);
             tf_passwort.setVisible(false);
-            panel1.repaint();
-            panel2.repaint();
-            panel3.repaint();
-        }
+            tabelle_17.setVisible(true);
+            tabelle_18.setVisible(false);
+            cb_konzertnummer.setVisible(true);
+            cb_konzertnummer2.setVisible(false);
+            cb_anzahl.setVisible(true);
+            cb_anzahl2.setVisible(false);
+            
+            
         
-        if(ae.getSource()==this.b_18){
-            b_18.setBackground(new Color(8,224,28));
-            b_17.setBackground(new Color(200,200,200));
-            l_logo.setVisible(true);
-            l_logo2.setVisible(true);
-            l_logo3.setVisible(true);
-            b_pweingabe.setVisible(true);
-            b_bneingabe.setVisible(true);
-            tf_benutzername.setVisible(false);
-            tf_passwort.setVisible(false);
-            panel1.repaint();
-            panel2.repaint();
-            panel3.repaint();
+        
+            int selection4 = cb_konzertnummer.getSelectedIndex();
+            int selection5 = cb_anzahl.getSelectedIndex();
+            switch (selection4){
+                case 0: switch (selection5){
+                            case 0: l_gesamtpreis2.setText("47,90 €"); break;
+                            case 1: l_gesamtpreis2.setText("95,80 €"); break;
+                            case 2: l_gesamtpreis2.setText("143,70 €"); break;
+                            case 3: l_gesamtpreis2.setText("191,60 €"); break;
+                            case 4: l_gesamtpreis2.setText("239,50 €"); break;
+                        }; break;
+                case 1: switch (selection5){
+                            case 0: l_gesamtpreis2.setText("13,90 €"); break;
+                            case 1: l_gesamtpreis2.setText("27,80 €"); break;
+                            case 2: l_gesamtpreis2.setText("41,70 €"); break;
+                            case 3: l_gesamtpreis2.setText("55,60 €"); break;
+                            case 4: l_gesamtpreis2.setText("69,50 €"); break;
+                        }; break;
+                case 3: switch (selection5){
+                            case 0: l_gesamtpreis2.setText("71,50 €"); break;
+                            case 1: l_gesamtpreis2.setText("143,00 €"); break;
+                            case 2: l_gesamtpreis2.setText("214,50 €"); break;
+                            case 3: l_gesamtpreis2.setText("286,00 €"); break;
+                            case 4: l_gesamtpreis2.setText("357,50 €"); break;
+                        }; break;
+            }
+        }else{
+            if(ae.getSource()==this.b_18){
+                b_18.setBackground(new Color(8,224,28));
+                b_17.setBackground(new Color(191,191,191));
+                l_logo.setVisible(true);
+                l_logo2.setVisible(true);
+                l_logo3.setVisible(true);
+                b_pweingabe.setVisible(true);
+                b_bneingabe.setVisible(true);
+                tf_benutzername.setVisible(false);
+                tf_passwort.setVisible(false);
+                tabelle_17.setVisible(false);
+                tabelle_18.setVisible(true);
+                cb_konzertnummer.setVisible(false);
+                cb_konzertnummer2.setVisible(true);
+                cb_anzahl.setVisible(false);
+                cb_anzahl2.setVisible(true);
+                
+                
+                
+            
+            
+                int selection6 = cb_konzertnummer2.getSelectedIndex();
+                int selection7 = cb_anzahl2.getSelectedIndex();
+                switch (selection6){
+                    case 0: switch (selection7){
+                                case 0: l_gesamtpreis2.setText("47,90 €"); break;
+                                case 1: l_gesamtpreis2.setText("95,80 €"); break;
+                                case 2: l_gesamtpreis2.setText("143,70 €"); break;
+                                case 3: l_gesamtpreis2.setText("191,60 €"); break;
+                                case 4: l_gesamtpreis2.setText("239,50 €"); break;
+                            }; break;
+                    case 1: switch (selection7){
+                                case 0: l_gesamtpreis2.setText("13,90 €"); break;
+                                case 1: l_gesamtpreis2.setText("27,80 €"); break;
+                                case 2: l_gesamtpreis2.setText("41,70 €"); break;
+                                case 3: l_gesamtpreis2.setText("55,60 €"); break;
+                                case 4: l_gesamtpreis2.setText("69,50 €"); break;
+                            }; break;
+                    case 2: switch (selection7){
+                                case 0: l_gesamtpreis2.setText("24,00 €"); break;
+                                case 1: l_gesamtpreis2.setText("48,00 €"); break;
+                                case 2: l_gesamtpreis2.setText("72,00 €"); break;
+                                case 3: l_gesamtpreis2.setText("96,00 €"); break;
+                                case 4: l_gesamtpreis2.setText("120,00 €"); break;
+                            }; break;
+                    case 3: switch (selection7){
+                                case 0: l_gesamtpreis2.setText("71,50 €"); break;
+                                case 1: l_gesamtpreis2.setText("143,00 €"); break;
+                                case 2: l_gesamtpreis2.setText("214,50 €"); break;
+                                case 3: l_gesamtpreis2.setText("286,00 €"); break;
+                                case 4: l_gesamtpreis2.setText("357,50 €"); break;
+                            }; break;
+                    case 4: switch (selection7){
+                                case 0: l_gesamtpreis2.setText("49,95 €"); break;
+                                case 1: l_gesamtpreis2.setText("99,90 €"); break;
+                                case 2: l_gesamtpreis2.setText("149,85 €"); break;
+                                case 3: l_gesamtpreis2.setText("199,80 €"); break;
+                                case 4: l_gesamtpreis2.setText("249,75 €"); break;
+                            }; break;
+                    case 5: switch (selection7){
+                                case 0: l_gesamtpreis2.setText("72,00 €"); break;
+                                case 1: l_gesamtpreis2.setText("144,00 €"); break;
+                                case 2: l_gesamtpreis2.setText("216,00 €"); break;
+                                case 3: l_gesamtpreis2.setText("288,00 €"); break;
+                                case 4: l_gesamtpreis2.setText("360,00 €"); break;
+                            }; break;
+                }
+            }
         }
         
         if(ae.getSource()==this.b_bneingabe){
@@ -601,9 +703,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_pweingabe.setVisible(true);
             tf_passwort.setVisible(false);
             tf_benutzername.setVisible(true);
-            panel1.repaint();
-            panel2.repaint();
-            panel3.repaint();
+            
         }
         
         if(ae.getSource()==this.b_pweingabe){
@@ -611,9 +711,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_bneingabe.setVisible(true);
             tf_benutzername.setVisible(false);
             tf_passwort.setVisible(true);
-            panel1.repaint();
-            panel2.repaint();
-            panel3.repaint();
+           
         }
         
         
@@ -628,57 +726,10 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             b_bneingabe.setVisible(true);
             tf_benutzername.setVisible(false);
             tf_passwort.setVisible(false);
-            panel1.repaint();
-            panel2.repaint();
-            panel3.repaint();
+          
         }
         
-        int selection4 = cb_konzertnummer.getSelectedIndex();
-        int selection5 = cb_anzahl.getSelectedIndex();
-        switch (selection4){
-            case 0: switch (selection5){
-                        case 0: l_gesamtpreis2.setText("47,90 €"); break;
-                        case 1: l_gesamtpreis2.setText("95,80 €"); break;
-                        case 2: l_gesamtpreis2.setText("143,70 €"); break;
-                        case 3: l_gesamtpreis2.setText("191,60 €"); break;
-                        case 4: l_gesamtpreis2.setText("239,50 €"); break;
-                    }; break;
-            case 1: switch (selection5){
-                        case 0: l_gesamtpreis2.setText("13,90 €"); break;
-                        case 1: l_gesamtpreis2.setText("27,80 €"); break;
-                        case 2: l_gesamtpreis2.setText("41,70 €"); break;
-                        case 3: l_gesamtpreis2.setText("55,60 €"); break;
-                        case 4: l_gesamtpreis2.setText("69,50 €"); break;
-                    }; break;
-            case 2: switch (selection5){
-                        case 0: l_gesamtpreis2.setText("24,00 €"); break;
-                        case 1: l_gesamtpreis2.setText("48,00 €"); break;
-                        case 2: l_gesamtpreis2.setText("72,00 €"); break;
-                        case 3: l_gesamtpreis2.setText("96,00 €"); break;
-                        case 4: l_gesamtpreis2.setText("120,00 €"); break;
-                    }; break;
-            case 3: switch (selection5){
-                        case 0: l_gesamtpreis2.setText("71,50 €"); break;
-                        case 1: l_gesamtpreis2.setText("143,00 €"); break;
-                        case 2: l_gesamtpreis2.setText("214,50 €"); break;
-                        case 3: l_gesamtpreis2.setText("286,00 €"); break;
-                        case 4: l_gesamtpreis2.setText("357,50 €"); break;
-                    }; break;
-            case 4: switch (selection5){
-                        case 0: l_gesamtpreis2.setText("49,95 €"); break;
-                        case 1: l_gesamtpreis2.setText("99,90 €"); break;
-                        case 2: l_gesamtpreis2.setText("149,85 €"); break;
-                        case 3: l_gesamtpreis2.setText("199,80 €"); break;
-                        case 4: l_gesamtpreis2.setText("249,75 €"); break;
-                    }; break;
-            case 5: switch (selection5){
-                        case 0: l_gesamtpreis2.setText("72,00 €"); break;
-                        case 1: l_gesamtpreis2.setText("144,00 €"); break;
-                        case 2: l_gesamtpreis2.setText("216,00 €"); break;
-                        case 3: l_gesamtpreis2.setText("288,00 €"); break;
-                        case 4: l_gesamtpreis2.setText("360,00 €"); break;
-                    }; break;
-        }
+    
             
         if(ae.getSource()==this.b_auswahlbestätigen){
             panel1.setVisible(false);
@@ -687,10 +738,28 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             l_logo.setVisible(true);
             l_logo2.setVisible(true);
             l_logo3.setVisible(true);
-            panel1.repaint();
-            panel2.repaint();
-            panel3.repaint();
+            
         }
+        
+        int selection8 = cb_anzahl2.getSelectedIndex();
+        switch (selection8){
+            case 0:  l_gesamtzahl2.setText("1 Karte"); break;
+            case 1:  l_gesamtzahl2.setText("2 Karten"); break;
+            case 2:  l_gesamtzahl2.setText("3 Karten"); break;
+            case 3:  l_gesamtzahl2.setText("4 Karten"); break;
+            case 4:  l_gesamtzahl2.setText("5 Karten"); break;
+            }
+            
+        int selection9 = cb_konzertnummer2.getSelectedIndex();
+        switch (selection9){
+            case 0:  l_endnummer2.setText("1 - Andreas Gabailer"); break;
+            case 1:  l_endnummer2.setText("2 - Donikkl"); break;
+            case 2:  l_endnummer2.setText("3 - Exil des Schattens"); break;
+            case 3:  l_endnummer2.setText("4 - Die Toten Hosen"); break;
+            case 4:  l_endnummer2.setText("5 - Trailerpark"); break;
+            case 5:  l_endnummer2.setText("6 - Rammstein"); break;
+        }
+        
         
         int selection = cb_anzahl.getSelectedIndex();
         switch (selection){
@@ -709,11 +778,10 @@ public class OBERFLAECHE extends JFrame implements ActionListener
             case 3:  l_endnummer2.setText("4 - Die Toten Hosen"); break;
             case 4:  l_endnummer2.setText("5 - Trailerpark"); break;
             case 5:  l_endnummer2.setText("6 - Rammstein"); break;
-            }
-            
+        }
+        
         
                 
-        
         /**Rechnungsfenster*/
         if(ae.getSource()==this.b_zurück2){
             panel2.setVisible(true);
@@ -829,8 +897,6 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         b_zurück1.setVisible(true);
         l_konzertnummer.setVisible(true);
         b_auswahlbestätigen.setVisible(true);
-        cb_konzertnummer.setVisible(true);
-        cb_anzahl.setVisible(true);
         l_logo.setVisible(true);
         l_logo2.setVisible(true);
         l_logo3.setVisible(true);
