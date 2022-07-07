@@ -627,7 +627,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
                             case 4: l_gesamtpreis2.setText("357,50 €"); break;
                         }; break;
             }
-        }else{
+        }
             if(ae.getSource()==this.b_18){
                 b_18.setBackground(new Color(8,224,28));
                 b_17.setBackground(new Color(191,191,191));
@@ -696,7 +696,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
                             }; break;
                 }
             }
-        }
+        
         
         if(ae.getSource()==this.b_bneingabe){
             b_bneingabe.setVisible(false);
@@ -774,10 +774,7 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         switch (selection2){
             case 0:  l_endnummer2.setText("1 - Andreas Gabailer"); break;
             case 1:  l_endnummer2.setText("2 - Donikkl"); break;
-            case 2:  l_endnummer2.setText("3 - Exil des Schattens"); break;
-            case 3:  l_endnummer2.setText("4 - Die Toten Hosen"); break;
-            case 4:  l_endnummer2.setText("5 - Trailerpark"); break;
-            case 5:  l_endnummer2.setText("6 - Rammstein"); break;
+            case 2:  l_endnummer2.setText("4 - Die Toten Hosen"); break;
         }
         
         
