@@ -22,7 +22,7 @@ import javax.swing.JComboBox;
       Povisorische Besetzung:
           Paula:    model
           Matthias:  view
-          Dennis:   controller1
+          Dennis:   controller
  */
 
 public class OBERFLAECHE extends JFrame implements ActionListener
