@@ -28,6 +28,8 @@ import javax.swing.JComboBox;
 public class OBERFLAECHE extends JFrame implements ActionListener
 
 {
+    int[] passwort;
+    
     private JPanel panel1;
     private JPanel panel2;
     private JPanel panel3;
@@ -923,6 +925,10 @@ public class OBERFLAECHE extends JFrame implements ActionListener
         l_logo3.setVisible(true);
                
         panel3.setVisible(true);
+        
+    }
+    
+    public void Einfuegen(){
         
     }
 }

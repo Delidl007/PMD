@@ -1,9 +1,11 @@
 
-
-public class LISTE extends Oberfläche implements ActionListener
+public class LISTE 
 {
-    private int anmeldedaten = new int[];
+    private LISTENELEMENT anfang;
     
-    public void daten d
+    public LISTE(){
+        
+    }
+    
     
 }
